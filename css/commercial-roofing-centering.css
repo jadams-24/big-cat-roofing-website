@@ -1,0 +1,161 @@
+/* Big Cat Roofing - Commercial Roofing Page Centering Styles */
+
+/* === FAQ Section Centering === */
+.faq-section h2 {
+    text-align: center !important;
+    margin-bottom: 40px;
+}
+
+/* === Investment Section Centering === */
+.investment-section h2 {
+    text-align: center !important;
+    margin-bottom: 20px;
+}
+
+.investment-section .section-subtitle {
+    text-align: center !important;
+    margin-bottom: 40px;
+}
+
+/* Center Investment Section Subheadings */
+.investment-content h3 {
+    text-align: center !important;
+    margin-bottom: 30px;
+}
+
+/* Specifically target the subheadings by class */
+.investment-factors h3,
+.roi-benefits h3 {
+    text-align: center !important;
+    margin-bottom: 30px;
+}
+
+/* === Industries Section Centering === */
+.industries-section h2 {
+    text-align: center !important;
+    margin-bottom: 20px;
+}
+
+.industries-section .section-subtitle {
+    text-align: center !important;
+    margin-bottom: 40px;
+}
+
+/* Center Each Industry Item Content */
+.industry {
+    text-align: center !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.industry .icon {
+    margin: 0 auto 16px auto !important;
+    display: block;
+}
+
+.industry h4 {
+    text-align: center !important;
+    margin: 16px 0 12px 0;
+    width: 100%;
+}
+
+.industry p {
+    text-align: center !important;
+    margin: 0;
+    width: 100%;
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+    .faq-section h2,
+    .investment-section h2,
+    .industries-section h2 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+    
+    .investment-section .section-subtitle,
+    .industries-section .section-subtitle {
+        font-size: 1.125rem;
+        margin-bottom: 30px;
+        padding: 0 10px;
+    }
+    
+    .investment-content h3 {
+        font-size: 1.5rem;
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .faq-section h2,
+    .investment-section h2,
+    .industries-section h2 {
+        font-size: 1.75rem;
+        margin-bottom: 25px;
+    }
+    
+    .investment-section .section-subtitle,
+    .industries-section .section-subtitle {
+        font-size: 1rem;
+        margin-bottom: 25px;
+        padding: 0 15px;
+        line-height: 1.6;
+    }
+    
+    .investment-content h3 {
+        font-size: 1.25rem;
+        margin-bottom: 20px;
+    }
+    
+    .industry {
+        padding: 20px 10px;
+    }
+    
+    .industry .icon {
+        margin-bottom: 12px !important;
+    }
+    
+    .industry h4 {
+        font-size: 1.125rem;
+        margin: 12px 0 8px 0;
+    }
+    
+    .industry p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+}
+
+/* === Print Styles === */
+@media print {
+    .faq-section h2,
+    .investment-section h2,
+    .industries-section h2,
+    .investment-section .section-subtitle,
+    .industries-section .section-subtitle,
+    .investment-content h3 {
+        text-align: center !important;
+        color: #000000 !important;
+    }
+    
+    .industry {
+        text-align: center !important;
+    }
+}
+
+/* === High Contrast Mode === */
+@media (prefers-contrast: high) {
+    .faq-section h2,
+    .investment-section h2,
+    .industries-section h2 {
+        color: #000000 !important;
+    }
+    
+    .investment-section .section-subtitle,
+    .industries-section .section-subtitle {
+        color: #333333 !important;
+    }
+}

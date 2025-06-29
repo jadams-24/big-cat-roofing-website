@@ -1,0 +1,25 @@
+WEBSITE REQUIREMENTS FOR BIG CAT ROOFING:
+
+Core Features:
+- Mobile-responsive design
+- Google Reviews API integration  
+- Contact forms with scheduling capability
+- Outlook email integration
+- Blog section for SEO
+- Phone number: 248-709-3746 prominently displayed
+- Service area: 15-mile radius around Warren, MI
+
+Technical Specs:
+- Fast loading (under 3 seconds)
+- Local SEO optimization
+- Schema markup for local business
+- SSL ready
+- Modern HTML5/CSS3/JavaScript
+
+Colors:
+- Primary Gold: #C8AF6A
+- Black: #000000
+- White: #ffffff
+- Secondary Gold: #d6c28f
+- Accent Gold: #ba9a45
+- Dark Gray: #1a1a1a

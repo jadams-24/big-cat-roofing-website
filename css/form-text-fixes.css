@@ -1,0 +1,233 @@
+/* Big Cat Roofing - Form Text Visibility Fixes */
+/* Ensures all form text is black with dark gray placeholders */
+
+/* Form Field Text Colors - Override all other styles */
+.form-group input,
+.form-group select,
+.form-group textarea,
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea,
+select {
+    color: #000000 !important; /* Black text for all user input */
+    background-color: #E8E8E8; /* Maintain light gray background */
+    border: 1px solid #ddd;
+    font-size: 16px;
+    padding: 12px;
+    border-radius: 4px;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+/* Placeholder Text Styling */
+.form-group input::placeholder,
+.form-group textarea::placeholder,
+input[type="text"]::placeholder,
+input[type="tel"]::placeholder,
+input[type="email"]::placeholder,
+textarea::placeholder {
+    color: #666666 !important; /* Dark gray for placeholder text */
+    opacity: 1; /* Ensure full opacity on all browsers */
+}
+
+/* Firefox placeholder fix */
+.form-group input::-moz-placeholder,
+.form-group textarea::-moz-placeholder,
+input[type="text"]::-moz-placeholder,
+input[type="tel"]::-moz-placeholder,
+input[type="email"]::-moz-placeholder,
+textarea::-moz-placeholder {
+    color: #666666 !important;
+    opacity: 1;
+}
+
+/* WebKit browsers (Chrome, Safari) placeholder fix */
+.form-group input::-webkit-input-placeholder,
+.form-group textarea::-webkit-input-placeholder,
+input[type="text"]::-webkit-input-placeholder,
+input[type="tel"]::-webkit-input-placeholder,
+input[type="email"]::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #666666 !important;
+    opacity: 1;
+}
+
+/* Microsoft Edge placeholder fix */
+.form-group input::-ms-input-placeholder,
+.form-group textarea::-ms-input-placeholder,
+input[type="text"]::-ms-input-placeholder,
+input[type="tel"]::-ms-input-placeholder,
+input[type="email"]::-ms-input-placeholder,
+textarea::-ms-input-placeholder {
+    color: #666666 !important;
+    opacity: 1;
+}
+
+/* Dropdown/Select Styling */
+.form-group select,
+select {
+    color: #000000 !important; /* Black text for selected values */
+    background-color: #E8E8E8 !important;
+    appearance: none; /* Remove default styling */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><path fill="%23666" d="M2 0L0 2h4zm0 5L0 3h4z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 12px;
+    padding-right: 40px; /* Make room for arrow */
+}
+
+/* Dropdown Options */
+.form-group select option,
+select option {
+    color: #000000 !important; /* Black text for dropdown options */
+    background-color: #ffffff !important; /* White background for options */
+    padding: 8px;
+}
+
+/* Focus States */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+textarea:focus,
+select:focus {
+    color: #000000 !important; /* Maintain black text when focused */
+    border-color: #C8AF6A !important; /* Gold border on focus */
+    box-shadow: 0 0 0 3px rgba(200, 175, 106, 0.1) !important;
+    outline: none;
+    background-color: #E8E8E8 !important;
+}
+
+/* Active/Typing State */
+.form-group input:active,
+.form-group select:active,
+.form-group textarea:active,
+input[type="text"]:active,
+input[type="tel"]:active,
+input[type="email"]:active,
+textarea:active,
+select:active {
+    color: #000000 !important; /* Black text while typing */
+}
+
+/* Filled Field State (when user has entered text) */
+.form-group input:not(:placeholder-shown),
+.form-group select:not(:placeholder-shown),
+.form-group textarea:not(:placeholder-shown),
+input[type="text"]:not(:placeholder-shown),
+input[type="tel"]:not(:placeholder-shown),
+input[type="email"]:not(:placeholder-shown),
+textarea:not(:placeholder-shown) {
+    color: #000000 !important; /* Black text for filled fields */
+}
+
+/* Error State Text Visibility */
+.form-group input.error,
+.form-group select.error,
+.form-group textarea.error {
+    color: #000000 !important; /* Keep text black even in error state */
+    background-color: #fdf2f2 !important; /* Light red background for errors */
+    border-color: #dc3545 !important;
+}
+
+.form-group input.error:focus,
+.form-group select.error:focus,
+.form-group textarea.error:focus {
+    color: #000000 !important; /* Black text when focused in error state */
+}
+
+/* Disabled State */
+.form-group input:disabled,
+.form-group select:disabled,
+.form-group textarea:disabled {
+    color: #666666 !important; /* Dark gray for disabled fields */
+    background-color: #f5f5f5 !important;
+    cursor: not-allowed;
+}
+
+/* Specific form IDs to ensure coverage */
+#contact-form input,
+#contact-form select,
+#contact-form textarea,
+#main-contact-form input,
+#main-contact-form select,
+#main-contact-form textarea,
+#service-area-contact-form input,
+#service-area-contact-form select,
+#service-area-contact-form textarea,
+#warren-contact-form input,
+#warren-contact-form select,
+#warren-contact-form textarea,
+#sterling-heights-contact-form input,
+#sterling-heights-contact-form select,
+#sterling-heights-contact-form textarea,
+#royal-oak-contact-form input,
+#royal-oak-contact-form select,
+#royal-oak-contact-form textarea,
+#ferndale-contact-form input,
+#ferndale-contact-form select,
+#ferndale-contact-form textarea,
+#roseville-contact-form input,
+#roseville-contact-form select,
+#roseville-contact-form textarea,
+#grosse-pointe-contact-form input,
+#grosse-pointe-contact-form select,
+#grosse-pointe-contact-form textarea {
+    color: #000000 !important;
+    background-color: #E8E8E8 !important;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .form-group input,
+    .form-group select,
+    .form-group textarea,
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    textarea,
+    select {
+        font-size: 16px !important; /* Prevent zoom on iOS */
+        color: #000000 !important;
+    }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    .form-group input,
+    .form-group select,
+    .form-group textarea,
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    textarea,
+    select {
+        color: #000000 !important;
+        border: 2px solid #000000 !important;
+    }
+    
+    .form-group input::placeholder,
+    .form-group textarea::placeholder,
+    input::placeholder,
+    textarea::placeholder {
+        color: #333333 !important;
+    }
+}
+
+/* Dark Mode Prevention (ensure text stays black) */
+@media (prefers-color-scheme: dark) {
+    .form-group input,
+    .form-group select,
+    .form-group textarea,
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    textarea,
+    select {
+        color: #000000 !important;
+        background-color: #E8E8E8 !important;
+    }
+}

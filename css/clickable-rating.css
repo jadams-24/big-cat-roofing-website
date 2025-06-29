@@ -1,0 +1,312 @@
+/* Big Cat Roofing - Clickable Google Rating Styles */
+
+/* Clickable Rating Link Styling */
+.rating-link {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    padding: 8px 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Remove default link underlines */
+.rating-link:link,
+.rating-link:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Hover Effects */
+.rating-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(200, 175, 106, 0.2);
+    background: rgba(200, 175, 106, 0.05);
+}
+
+.rating-link:hover .rating {
+    transform: scale(1.02);
+}
+
+.rating-link:hover .stars {
+    color: #B8A055;
+    text-shadow: 0 2px 8px rgba(200, 175, 106, 0.3);
+    animation: starGlow 0.6s ease-in-out;
+}
+
+.rating-link:hover span {
+    color: #C8AF6A;
+    font-weight: 700;
+}
+
+/* Active/Click State */
+.rating-link:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(200, 175, 106, 0.15);
+}
+
+/* Focus State for Accessibility */
+.rating-link:focus {
+    outline: 2px solid #C8AF6A;
+    outline-offset: 3px;
+    background: rgba(200, 175, 106, 0.08);
+}
+
+/* Star Glow Animation */
+@keyframes starGlow {
+    0% { 
+        transform: scale(1);
+        filter: brightness(1);
+    }
+    50% { 
+        transform: scale(1.05);
+        filter: brightness(1.2);
+    }
+    100% { 
+        transform: scale(1);
+        filter: brightness(1);
+    }
+}
+
+/* Enhanced Rating Container */
+.rating-link .rating {
+    text-align: center;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+/* Enhanced Stars Styling */
+.rating-link .stars {
+    color: #C8AF6A;
+    font-size: 2.4rem;
+    margin-bottom: 0.4rem;
+    transition: all 0.3s ease;
+    display: block;
+    letter-spacing: 2px;
+}
+
+/* Enhanced Rating Text */
+.rating-link span {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--dark-gray, #1a1a1a);
+    transition: all 0.3s ease;
+    display: block;
+    white-space: nowrap;
+}
+
+/* Cursor Pointer */
+.rating-link {
+    cursor: pointer;
+}
+
+/* Subtle Background Effect on Hover */
+.rating-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(200, 175, 106, 0.1) 0%, rgba(184, 160, 85, 0.1) 100%);
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.rating-link:hover::before {
+    opacity: 1;
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    .rating-link {
+        padding: 10px 8px;
+        touch-action: manipulation;
+    }
+    
+    .rating-link:hover {
+        transform: none; /* Disable transform on mobile for better performance */
+    }
+    
+    .rating-link:active {
+        background: rgba(200, 175, 106, 0.1);
+        transform: scale(0.98);
+    }
+    
+    .rating-link .stars {
+        font-size: 2.2rem;
+        letter-spacing: 1px;
+    }
+    
+    .rating-link span {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .rating-link {
+        padding: 8px 6px;
+    }
+    
+    .rating-link .stars {
+        font-size: 2rem;
+        margin-bottom: 0.3rem;
+    }
+    
+    .rating-link span {
+        font-size: 0.8rem;
+    }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    .rating-link:hover {
+        background: #000000;
+        color: #ffffff;
+    }
+    
+    .rating-link:hover .stars {
+        color: #FFD700;
+    }
+    
+    .rating-link:hover span {
+        color: #ffffff;
+    }
+    
+    .rating-link:focus {
+        outline: 3px solid #000000;
+        background: #ffffff;
+    }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    .rating-link,
+    .rating-link .rating,
+    .rating-link .stars,
+    .rating-link span,
+    .rating-link::before {
+        transition: none;
+        animation: none;
+    }
+    
+    .rating-link:hover {
+        transform: none;
+    }
+    
+    .starGlow {
+        animation: none;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .rating-link {
+        color: #000000 !important;
+        text-decoration: none;
+        background: none;
+        box-shadow: none;
+        transform: none;
+    }
+    
+    .rating-link .stars {
+        color: #000000 !important;
+    }
+    
+    .rating-link span {
+        color: #000000 !important;
+    }
+    
+    /* Add URL after rating for print */
+    .rating-link::after {
+        content: " (Google Reviews: tinyurl.com/bigcatreviews)";
+        font-size: 0.7rem;
+        color: #666666;
+    }
+}
+
+/* Trust Item Specific Overrides */
+.trust-item .rating-link {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin: 0;
+}
+
+.trust-item .rating-link .rating {
+    margin: 0;
+}
+
+/* Testimonial Stars Link Styling */
+.testimonial-stars-link {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+    padding: 4px 8px;
+    margin: 0;
+}
+
+.testimonial-stars-link:link,
+.testimonial-stars-link:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+.testimonial-stars-link:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(200, 175, 106, 0.15);
+    background: rgba(200, 175, 106, 0.05);
+}
+
+.testimonial-stars-link:hover .stars {
+    color: #B8A055;
+    text-shadow: 0 1px 4px rgba(200, 175, 106, 0.3);
+    animation: starGlow 0.4s ease-in-out;
+}
+
+.testimonial-stars-link:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(200, 175, 106, 0.1);
+}
+
+.testimonial-stars-link:focus {
+    outline: 2px solid #C8AF6A;
+    outline-offset: 2px;
+    background: rgba(200, 175, 106, 0.08);
+}
+
+.testimonial-stars-link .stars {
+    color: #C8AF6A;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    display: block;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+/* Mobile Testimonial Stars */
+@media (max-width: 768px) {
+    .testimonial-stars-link {
+        padding: 6px 4px;
+        touch-action: manipulation;
+    }
+    
+    .testimonial-stars-link:hover {
+        transform: none;
+    }
+    
+    .testimonial-stars-link:active {
+        background: rgba(200, 175, 106, 0.1);
+        transform: scale(0.98);
+    }
+    
+    .testimonial-stars-link .stars {
+        font-size: 1.1rem;
+    }
+}
