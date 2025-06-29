@@ -56,6 +56,11 @@ function setupFormSubmission(form, formType) {
                 throw new Error('Please fill in all required fields correctly.');
             }
             
+            // Check for spam/bot submissions
+            if (isSpamSubmission(form)) {
+                throw new Error('Invalid submission detected. Please try again.');
+            }
+            
             // Get form data
             const formData = getFormData(form, formType);
             
@@ -179,7 +184,7 @@ async function sendCustomerConfirmation(data) {
         // Use a separate template for customer confirmations
         const response = await emailjs.send(
             EMAILJS_CONFIG.SERVICE_ID,
-            'customer_confirmation_', // Separate template for customer emails
+            'customer_confirmation', // Separate template for customer emails
             confirmationParams
         );
         
@@ -356,11 +361,30 @@ function trackFormSubmission(formType, service) {
     console.log('Form submission tracked:', { formType, service });
 }
 
+// Basic spam detection
+function isSpamSubmission(form) {
+    const formData = new FormData(form);
+    const name = formData.get('name') || '';
+    const email = formData.get('email') || '';
+    const message = formData.get('message') || '';
+    
+    // Check for common spam patterns
+    const spamPatterns = [
+        /viagra|cialis|pharmacy|casino|gambling/i,
+        /http:\/\/|https:\/\/.*\.tk|.*\.ml/i,
+        /\b(SEO|link building|backlink)\b/i
+    ];
+    
+    const allText = `${name} ${email} ${message}`.toLowerCase();
+    return spamPatterns.some(pattern => pattern.test(allText));
+}
+
 // Export functions for external use
 window.BigCatEmailNotifications = {
     initializeContactForms,
     setupFormSubmission,
     validateForm,
     sendEmailNotification,
-    sendCustomerConfirmation
+    sendCustomerConfirmation,
+    isSpamSubmission
 };

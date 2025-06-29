@@ -65,27 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Contact Form Handling
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
-            const data = {};
-            formData.forEach((value, key) => {
-                data[key] = value;
-            });
-            
-            // Here you would normally send the data to a server
-            // For now, we'll just show an alert
-            alert('Thank you for your inquiry! We will contact you within 24 hours to schedule your free estimate.');
-            
-            // Reset form
-            this.reset();
-        });
-    }
+    // Contact Form Handling - Removed: Using EmailJS handler instead
 
     // Sticky Header on Scroll
     const header = document.querySelector('.main-header');
