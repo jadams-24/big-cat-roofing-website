@@ -1,0 +1,65 @@
+# robots.txt for Big Cat Roofing
+# https://www.bigcatroofs.com/robots.txt
+
+# Allow all search engines to crawl all pages
+User-agent: *
+Allow: /
+
+# Block crawling of admin, private, and temporary directories
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /tmp/
+Disallow: /backup/
+Disallow: /staging/
+Disallow: /dev/
+Disallow: /test/
+Disallow: /wp-admin/
+Disallow: /wp-content/cache/
+Disallow: /wp-content/uploads/wpo-cache/
+
+# Block sensitive files and directories
+Disallow: /.git/
+Disallow: /.env
+Disallow: /config/
+Disallow: /logs/
+Disallow: /*.log
+Disallow: /error_log
+Disallow: /access_log
+
+# Block search and filter URLs to prevent duplicate content
+Disallow: /*?*
+Disallow: /search/
+Disallow: /*search*
+Disallow: /*filter*
+
+# Block print versions and PDFs that might create duplicate content
+Disallow: /print/
+Disallow: /*print*
+
+# Allow important directories for SEO
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /assets/
+Allow: /blog/
+Allow: /service-areas/
+
+# Specific search engine directives
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.bigcatroofs.com/sitemap.xml
+
+# Optional: Crawl-delay for less aggressive bots (uncomment if needed)
+# Crawl-delay: 1
+
+# Last updated: 2025-06-30
+# Contact: Big Cat Roofing - Warren, MI Roofing Contractor

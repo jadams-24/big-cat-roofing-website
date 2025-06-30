@@ -295,9 +295,15 @@ class EstimateModal {
         const messageDiv = this.modal.querySelector('#modal-message');
         const form = e.target;
         
+        // Validate form
+        if (!this.validateForm(form)) {
+            return;
+        }
+        
         // Show loading state
         submitBtn.classList.add('loading');
         submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
         
         try {
             // Collect form data
@@ -315,11 +321,25 @@ class EstimateModal {
             
             // Use EmailJS if available
             if (window.emailjs && window.EMAILJS_CONFIG) {
+                // Format data to match EmailJS template
+                const emailParams = {
+                    to_email: 'Office@bigcatroofs.com',
+                    from_name: 'Big Cat Roofing Website',
+                    subject: `New Lead - ${data.service}`,
+                    customer_name: data.name,
+                    customer_phone: data.phone,
+                    customer_email: data.email,
+                    service_requested: data.service,
+                    customer_message: data.message,
+                    property_address: data.address,
+                    lead_source: data.source,
+                    submission_time: data.timestamp
+                };
+                
                 const response = await emailjs.send(
                     window.EMAILJS_CONFIG.SERVICE_ID,
                     window.EMAILJS_CONFIG.TEMPLATE_ID,
-                    data,
-                    window.EMAILJS_CONFIG.PUBLIC_KEY
+                    emailParams
                 );
                 
                 if (response.status === 200) {
@@ -360,6 +380,7 @@ class EstimateModal {
             // Remove loading state
             submitBtn.classList.remove('loading');
             submitBtn.disabled = false;
+            submitBtn.textContent = 'Request Free Estimate';
         }
     }
 
@@ -381,6 +402,51 @@ class EstimateModal {
         messageDiv.style.display = 'block';
     }
 
+    validateForm(form) {
+        const requiredFields = form.querySelectorAll('[required]');
+        let isValid = true;
+        
+        // Clear previous errors
+        form.querySelectorAll('.error').forEach(field => field.classList.remove('error'));
+        
+        requiredFields.forEach(field => {
+            const value = field.value.trim();
+            
+            if (!value) {
+                isValid = false;
+                field.classList.add('error');
+                return;
+            }
+            
+            // Email validation
+            if (field.type === 'email') {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(value)) {
+                    isValid = false;
+                    field.classList.add('error');
+                }
+            }
+            
+            // Phone validation
+            if (field.type === 'tel') {
+                const phoneRegex = /^[\d\s\-\(\)\+\.]+$/;
+                const digitsOnly = value.replace(/\D/g, '');
+                if (!phoneRegex.test(value) || digitsOnly.length < 10) {
+                    isValid = false;
+                    field.classList.add('error');
+                }
+            }
+        });
+        
+        if (!isValid) {
+            // Focus first error field
+            const firstError = form.querySelector('.error');
+            if (firstError) firstError.focus();
+        }
+        
+        return isValid;
+    }
+    
     fallbackSubmission(data) {
         const subject = `Free Estimate Request - ${data.service}`;
         const body = `
@@ -402,15 +468,23 @@ Time: ${data.timestamp}
 }
 
 // Initialize modal when DOM is ready
-document.addEventListener('DOMContentLoaded', () => {
-    new EstimateModal();
-});
-
-// Also initialize if DOM already loaded
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
-        new EstimateModal();
+        window.estimateModal = new EstimateModal();
+        console.log('Big Cat Roofing: Estimate modal initialized');
     });
 } else {
-    new EstimateModal();
+    // DOM already loaded
+    window.estimateModal = new EstimateModal();
+    console.log('Big Cat Roofing: Estimate modal initialized');
 }
+
+// Debug function to test modal
+window.testEstimateModal = function() {
+    if (window.estimateModal) {
+        window.estimateModal.openModal();
+        console.log('Modal test opened successfully');
+    } else {
+        console.error('Modal not initialized');
+    }
+};

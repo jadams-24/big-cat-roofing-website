@@ -388,3 +388,6 @@ window.BigCatEmailNotifications = {
     sendCustomerConfirmation,
     isSpamSubmission
 };
+
+// Export EmailJS configuration globally
+window.EMAILJS_CONFIG = EMAILJS_CONFIG;

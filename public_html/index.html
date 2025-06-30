@@ -19,6 +19,9 @@
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/web-app-manifest-512x512.png">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://bigcatroofs.com/">
@@ -157,10 +160,10 @@
                         <img src="images/logos/logo-black.svg" alt="Big Cat Roofing" class="logo-header">
                     </a>
                     
-                    <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
+                    <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false" type="button">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
                     </button>
                     
                     <ul class="nav-menu">
@@ -773,12 +776,14 @@
         // Load EmailJS library first
         loadScript('https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js', function() {
             // Load email notifications after EmailJS is ready
-            loadScript('js/email-notifications.js');
+            loadScript('js/email-notifications.js', function() {
+                // Load popup modal after EmailJS config is available
+                loadScript('js/popup-modal.js');
+            });
         });
         
         // Load critical scripts immediately
         loadScript('js/main.js');
-        loadScript('js/popup-modal.js');
         
         // Defer non-critical scripts until page interaction
         let scriptsLoaded = false;
