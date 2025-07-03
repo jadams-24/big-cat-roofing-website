@@ -27,10 +27,16 @@
     
     <!-- Include existing CSS files -->
     <link rel="stylesheet" href="css/combined.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/responsive.min.css">
-    <link rel="stylesheet" href="css/popup-modal.min.css">
-    <link rel="stylesheet" href="css/city-page.min.css">
+    <link rel="stylesheet" href="css/styles.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/responsive.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/popup-modal.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/city-page.min.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/responsive.min.css">
+        <link rel="stylesheet" href="css/popup-modal.min.css">
+        <link rel="stylesheet" href="css/city-page.min.css">
+    </noscript>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -362,10 +368,10 @@
                     <p>Clawson's trusted roofing contractor. Quality workmanship at reasonable prices. GAF & MuleHide certified with 20+ years serving Metro Detroit.</p>
                     <div class="footer-certifications">
                         <a href="https://www.gaf.com/en-us/roofing-contractors/residential/usa/mi/eastpointe/big-cat-roofing-llc-1146071" target="_blank" rel="noopener noreferrer" class="certification-link gaf-certified-link-footer">
-                            <img src="assets/images/logos/Certified_Plus.png" alt="GAF Certified Plus Contractor" class="gaf-certified-badge-footer" width="80" height="80">
+                            <img src="assets/images/logos/Certified_Plus.png" alt="GAF Certified Plus Contractor" class="gaf-certified-badge-footer" width="80" height="80" loading="lazy" decoding="async" sizes="(max-width: 768px) 60px, 80px">
                         </a>
                         <a href="https://www.mulehide.com/" target="_blank" rel="noopener noreferrer" class="certification-link mulehide-certified-link-footer">
-                            <img src="assets/images/logos/Mulehide Logo.png" alt="MuleHide Certified Commercial Roofing Contractor" class="mulehide-certified-badge-footer" width="80" height="80">
+                            <img src="assets/images/logos/Mulehide Logo.png" alt="MuleHide Certified Commercial Roofing Contractor" class="mulehide-certified-badge-footer" width="80" height="80" loading="lazy" decoding="async" sizes="(max-width: 768px) 60px, 80px">
                         </a>
                         <img src="images/logos/bbb-accredited.png" alt="BBB Accredited" width="80" height="40">
                     </div>

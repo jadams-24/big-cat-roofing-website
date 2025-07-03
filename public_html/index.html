@@ -50,13 +50,22 @@
     <link rel="preload" href="css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     
-    <!-- CSS Files - Non-blocking load -->
+    <!-- Critical CSS (above-the-fold) loaded synchronously -->
     <link rel="stylesheet" href="css/combined.min.css">
-    <noscript><link rel="stylesheet" href="css/styles.css"></noscript>
+    
+    <!-- Non-critical CSS loaded asynchronously -->
     <link rel="stylesheet" href="css/responsive.min.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="css/popup-modal.min.css">
-    <link rel="stylesheet" href="css/business-info-improvements.css">
-    <link rel="stylesheet" href="css/clickable-rating.css">
+    <link rel="stylesheet" href="css/popup-modal.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/business-info-improvements.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/clickable-rating.css" media="print" onload="this.media='all'">
+    
+    <!-- Fallback for no-JS users -->
+    <noscript>
+        <link rel="stylesheet" href="css/responsive.min.css">
+        <link rel="stylesheet" href="css/popup-modal.min.css">
+        <link rel="stylesheet" href="css/business-info-improvements.css">
+        <link rel="stylesheet" href="css/clickable-rating.css">
+    </noscript>
     
     <!-- Leaflet CSS - Deferred -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
@@ -248,13 +257,13 @@
             <div class="trust-items">
                 <div class="trust-item">
                     <a href="https://www.gaf.com/en-us/roofing-contractors/residential/usa/mi/eastpointe/big-cat-roofing-llc-1146071" target="_blank" rel="noopener noreferrer" class="certification-link gaf-certified-link">
-                        <img src="assets/images/logos/Certified_Plus.png" alt="GAF Certified Plus Contractor" class="gaf-certified-badge" width="180" height="180">
+                        <img src="assets/images/logos/Certified_Plus.png" alt="GAF Certified Plus Contractor" class="gaf-certified-badge" width="180" height="180" loading="lazy" decoding="async" sizes="(max-width: 768px) 120px, 180px">
                     </a>
                     <span>GAF Certified</span>
                 </div>
                 <div class="trust-item">
                     <a href="https://www.mulehide.com/" target="_blank" rel="noopener noreferrer" class="certification-link mulehide-certified-link">
-                        <img src="assets/images/logos/Mulehide Logo.png" alt="MuleHide Certified Commercial Roofing Contractor" class="mulehide-certified-badge" width="100" height="100">
+                        <img src="assets/images/logos/Mulehide Logo.png" alt="MuleHide Certified Commercial Roofing Contractor" class="mulehide-certified-badge" width="100" height="100" loading="lazy" decoding="async" sizes="(max-width: 768px) 80px, 100px">
                     </a>
                     <span>MuleHide Certified</span>
                 </div>
@@ -715,10 +724,10 @@
                     <p>Warren's premier roofing contractor offering quality workmanship at reasonable prices. GAF & MuleHide certified with 20+ years of Michigan experience.</p>
                     <div class="footer-certifications">
                         <a href="https://www.gaf.com/en-us/roofing-contractors/residential/usa/mi/eastpointe/big-cat-roofing-llc-1146071" target="_blank" rel="noopener noreferrer" class="certification-link gaf-certified-link-footer">
-                            <img src="assets/images/logos/Certified_Plus.png" alt="GAF Certified Plus Contractor Warren MI - Premium Shingle Installation" class="gaf-certified-badge-footer" width="80" height="80" loading="lazy">
+                            <img src="assets/images/logos/Certified_Plus.png" alt="GAF Certified Plus Contractor Warren MI - Premium Shingle Installation" class="gaf-certified-badge-footer" width="80" height="80" loading="lazy" decoding="async" sizes="(max-width: 768px) 60px, 80px">
                         </a>
                         <a href="https://www.mulehide.com/" target="_blank" rel="noopener noreferrer" class="certification-link mulehide-certified-link-footer">
-                            <img src="assets/images/logos/Mulehide Logo.png" alt="MuleHide Certified Commercial Flat Roof Specialist Detroit Metro" class="mulehide-certified-badge-footer" width="80" height="80" loading="lazy">
+                            <img src="assets/images/logos/Mulehide Logo.png" alt="MuleHide Certified Commercial Flat Roof Specialist Detroit Metro" class="mulehide-certified-badge-footer" width="80" height="80" loading="lazy" decoding="async" sizes="(max-width: 768px) 60px, 80px">
                         </a>
                         <img src="images/logos/bbb-accredited.png" alt="Better Business Bureau Accredited Roofing Contractor Detroit Metro" width="80" height="40" loading="lazy">
                     </div>
