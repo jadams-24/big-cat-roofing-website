@@ -84,7 +84,7 @@ function initializeFullMap() {
             coords: [42.4606, -83.1346],
             county: 'Oakland',
             description: 'Creative community roofing solutions',
-            link: '/service-areas/ferndale.html'
+            link: '/ferndale-roofing.html'
         },
         'Troy': {
             coords: [42.6064, -83.1498],
