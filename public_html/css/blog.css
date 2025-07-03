@@ -1,11 +1,16 @@
 /* Big Cat Roofing - Blog Specific Styles */
 
-/* Blog Hero Section Improvements */
-.blog-hero {
-    background: #1a1a1a;
-    color: #ffffff;
-    padding: 80px 0;
-    position: relative;
+/* Blog Search Section */
+.blog-search-section {
+    background: #f8f9fa;
+    padding: 60px 0;
+    border-top: 1px solid #e9ecef;
+}
+
+.blog-search-content {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 /* Hide breadcrumb navigation completely */
@@ -32,7 +37,7 @@
     text-align: center !important;
     font-size: 3rem;
     font-weight: 700;
-    color: #C8AF6A;
+    color: #1a1a1a;
     margin: 0 0 20px 0;
     letter-spacing: -0.02em;
     line-height: 1.2;
@@ -42,7 +47,7 @@
     text-align: center !important;
     font-size: 1.25rem;
     font-weight: 400;
-    color: #cccccc;
+    color: #666666;
     margin: 0 auto 32px auto;
     line-height: 1.6;
     max-width: 600px;
@@ -50,9 +55,9 @@
 
 /* Centered search bar */
 .blog-search {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0 auto;
     width: 100%;
 }
@@ -121,10 +126,16 @@
     height: 20px;
 }
 
+/* Ensure proper blog content spacing */
+.blog-content {
+    margin-top: 0;
+    padding-top: 0;
+}
+
 /* Responsive Design for Blog Hero */
 @media (max-width: 768px) {
     .blog-hero {
-        padding: 60px 0;
+        padding: 60px 0 80px 0;
     }
     
     .blog-hero h1 {
