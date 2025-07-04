@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8YWQ9MES9F"></script>
+    <!-- Google tag (gtag.js) - Optimized for performance -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-8YWQ9MES9F');
     </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8YWQ9MES9F"></script>
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +17,7 @@
     <meta name="robots" content="index, follow">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="format-detection" content="telephone=no">
-    <title>Trusted Warren MI Roofers | Fast Service | Big Cat Roofing</title>
+    <title>Big Cat Roofing: Trusted Warren MI Roofers | Fast Service</title>
     <meta name="description" content="Big Cat Roofing - Warren's premier roofing contractor serving Metro Detroit. Expert residential & commercial services. Licensed & insured. Call 248-709-3746."
     <meta name="keywords" content="roofing contractors Warren MI, roof repair Detroit Metro, roof replacement Sterling Heights, shingle installation Michigan, metal roofing Southeast Michigan, flat roof systems, storm damage repair, emergency roofing Warren, roof inspection Detroit, GAF Master Elite contractor, MuleHide certified roofer, licensed roofing company Michigan, roof maintenance Metro Detroit">
     
@@ -26,6 +25,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="https://unpkg.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -39,16 +42,34 @@
     <!-- Critical CSS - Inline for performance -->
     <style>
         /* Critical above-the-fold styles */
+        @font-face {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url('https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2') format('woff2');
+        }
         body { font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; }
         .main-header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
         .btn-primary { background: #C8AF6A; color: #fff; padding: 12px 24px; text-decoration: none; border-radius: 4px; }
         .page-hero { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)); color: white; padding: 100px 0; text-align: center; }
+        /* Prevent layout shift from hero section */
+        .hero { min-height: 600px; display: flex; align-items: center; }
+        .hero-content { width: 100%; }
+        /* Logo dimensions to prevent shift */
+        .logo-header { width: 260px; height: 78px; }
+        /* Trust bar layout stability */
+        .trust-bar { padding: 20px 0; }
+        .trust-items { display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap; }
+        .trust-item { text-align: center; flex-shrink: 0; }
     </style>
     
     <!-- Preload critical resources -->
+    <link rel="preload" href="images/logos/logo-black.svg" as="image" type="image/svg+xml">
     <link rel="preload" href="css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2" as="font" type="font/woff2" crossorigin>
     
     <!-- Critical CSS (above-the-fold) loaded synchronously -->
     <link rel="stylesheet" href="css/combined.min.css">
@@ -174,7 +195,7 @@
             <div class="container">
                 <div class="nav-wrapper">
                     <a href="/" class="logo">
-                        <img src="images/logos/logo-black.svg" alt="Big Cat Roofing" class="logo-header">
+                        <img src="images/logos/logo-black.svg" alt="Big Cat Roofing" class="logo-header" width="260" height="78" fetchpriority="high">
                     </a>
                     
                     <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false" type="button">
@@ -244,7 +265,7 @@
                         </svg>
                         Call 248-709-3746
                     </a>
-                    <a href="/free-estimate" class="btn btn-secondary btn-lg">Get Free Estimate</a>
+                    <a href="contact.html" class="btn btn-secondary btn-lg">Get Free Estimate</a>
                 </div>
             </div>
         </div>
@@ -257,18 +278,18 @@
             <div class="trust-items">
                 <div class="trust-item">
                     <a href="https://www.gaf.com/en-us/roofing-contractors/residential/usa/mi/eastpointe/big-cat-roofing-llc-1146071" target="_blank" rel="noopener noreferrer" class="certification-link gaf-certified-link">
-                        <img src="assets/images/logos/Certified_Plus.png" alt="GAF Certified Plus Contractor" class="gaf-certified-badge" width="180" height="180" loading="lazy" decoding="async" sizes="(max-width: 768px) 120px, 180px">
+                        <img src="assets/images/logos/Certified_Plus.png" alt="GAF Certified Plus Contractor" class="gaf-certified-badge" width="180" height="180" decoding="async" sizes="(max-width: 768px) 120px, 180px">
                     </a>
                     <span>GAF Certified</span>
                 </div>
                 <div class="trust-item">
                     <a href="https://www.mulehide.com/" target="_blank" rel="noopener noreferrer" class="certification-link mulehide-certified-link">
-                        <img src="assets/images/logos/Mulehide Logo.png" alt="MuleHide Certified Commercial Roofing Contractor" class="mulehide-certified-badge" width="100" height="100" loading="lazy" decoding="async" sizes="(max-width: 768px) 80px, 100px">
+                        <img src="assets/images/logos/Mulehide Logo.png" alt="MuleHide Certified Commercial Roofing Contractor" class="mulehide-certified-badge" width="100" height="100" decoding="async" sizes="(max-width: 768px) 80px, 100px">
                     </a>
                     <span>MuleHide Certified</span>
                 </div>
                 <div class="trust-item">
-                    <img src="images/logos/bbb-accredited.png" alt="Better Business Bureau Accredited Roofing Company - Big Cat Roofing Warren MI" width="100" height="50" loading="lazy">
+                    <img src="images/logos/bbb-accredited.png" alt="Better Business Bureau Accredited Roofing Company - Big Cat Roofing Warren MI" width="100" height="50">
                     <span>BBB Accredited</span>
                 </div>
                 <div class="trust-item">
@@ -719,7 +740,7 @@
             <div class="footer-content">
                 <div class="footer-column">
                     <a href="/">
-                        <img src="images/logos/logo-black.svg" alt="Big Cat Roofing" class="footer-logo">
+                        <img src="images/logos/logo-black.svg" alt="Big Cat Roofing" class="footer-logo" width="160" height="48" loading="lazy">
                     </a>
                     <p>Warren's premier roofing contractor offering quality workmanship at reasonable prices. GAF & MuleHide certified with 20+ years of Michigan experience.</p>
                     <div class="footer-certifications">
@@ -783,45 +804,44 @@
         </div>
     </footer>
 
-    <!-- Optimized JavaScript Loading -->
+    <!-- Core Scripts - Essential for functionality -->
+    <script src="js/main.min.js" defer></script>
+    
+    <!-- Third-party Scripts - Load asynchronously -->
+    <script async src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" onload="loadEmailScripts()"></script>
+    
+    <!-- Deferred Scripts - Load after user interaction or timeout -->
     <script>
-        // Performance optimization: Load scripts based on user interaction
-        function loadScript(src, callback) {
-            const script = document.createElement('script');
-            script.src = src;
-            script.defer = true;
-            if (callback) script.onload = callback;
-            document.head.appendChild(script);
+        function loadEmailScripts() {
+            const emailScript = document.createElement('script');
+            emailScript.src = 'js/email-notifications.js';
+            emailScript.defer = true;
+            emailScript.onload = function() {
+                const popupScript = document.createElement('script');
+                popupScript.src = 'js/popup-modal.js';
+                popupScript.defer = true;
+                document.head.appendChild(popupScript);
+            };
+            document.head.appendChild(emailScript);
         }
         
-        // Load EmailJS library first
-        loadScript('https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js', function() {
-            // Load email notifications after EmailJS is ready
-            loadScript('js/email-notifications.js', function() {
-                // Load popup modal after EmailJS config is available
-                loadScript('js/popup-modal.js');
-            });
-        });
-        
-        // Load critical scripts immediately
-        loadScript('js/main.js');
-        
-        // Defer non-critical scripts until page interaction
-        let scriptsLoaded = false;
-        function loadDeferredScripts() {
-            if (scriptsLoaded) return;
-            scriptsLoaded = true;
-            
-            loadScript('https://unpkg.com/leaflet@1.9.4/dist/leaflet.js', function() {
-                loadScript('js/service-area-map.js');
-            });
+        function loadMapScripts() {
+            const leafletScript = document.createElement('script');
+            leafletScript.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
+            leafletScript.onload = function() {
+                const mapScript = document.createElement('script');
+                mapScript.src = 'js/service-area-map.js';
+                mapScript.defer = true;
+                document.head.appendChild(mapScript);
+            };
+            document.head.appendChild(leafletScript);
         }
         
-        // Load on user interaction or after 3 seconds
-        ['click', 'touchstart', 'scroll'].forEach(event => {
-            document.addEventListener(event, loadDeferredScripts, { once: true, passive: true });
+        // Load map scripts on interaction or after delay
+        ['click', 'scroll', 'touchstart'].forEach(event => {
+            document.addEventListener(event, loadMapScripts, { once: true, passive: true });
         });
-        setTimeout(loadDeferredScripts, 3000);
+        setTimeout(loadMapScripts, 4000);
     </script>
 </body>
 </html>
