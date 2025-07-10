@@ -230,8 +230,7 @@
     
     /* Trust Bar */
     .trust-items {
-        flex-direction: column;
-        gap: var(--spacing-md);
+        gap: 40px;
     }
     
     /* Sections */

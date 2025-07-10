@@ -455,35 +455,44 @@ body.menu-open {
 /* Trust Bar */
 .trust-bar {
     background-color: var(--light-gray);
-    padding: var(--spacing-md) 0;
+    padding: var(--spacing-lg) 0;
     border-bottom: 1px solid #e0e0e0;
 }
 
 .trust-items {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: var(--spacing-lg);
+    gap: 60px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .trust-item {
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: var(--spacing-sm);
     font-weight: 600;
     color: var(--dark-gray);
+    text-align: center;
 }
 
 .trust-item img {
-    height: 50px;
+    height: 60px;
     width: auto;
-    opacity: 0.8;
+    opacity: 0.9;
     transition: opacity var(--transition-base);
 }
 
 .trust-item:hover img {
     opacity: 1;
+}
+
+.trust-item span {
+    font-size: 1.4rem;
+    margin-top: 8px;
 }
 
 .rating {
@@ -1899,7 +1908,7 @@ section {
 }
 
 .gaf-certified-badge {
-    width: 180px;
+    width: 120px;
     height: auto;
     max-width: 100%;
     transition: all var(--transition-base);
@@ -1945,7 +1954,7 @@ section {
 }
 
 .mulehide-certified-badge {
-    width: 100px;
+    width: 120px;
     height: auto;
     max-width: 100%;
     transition: all var(--transition-base);
