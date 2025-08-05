@@ -3484,3 +3484,48 @@ section {
     color: var(--secondary-gold);
     margin-bottom: var(--spacing-lg);
 }
+
+/* Social Media Section */
+.social-media-section {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.social-media-section h4 {
+    color: #d4af37;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-icons a:hover .social-icon {
+    transform: scale(1.1);
+}
+
+.social-icon.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+    .social-icons {
+        gap: 1rem;
+    }
+    
+    .social-icon {
+        width: 35px;
+        height: 35px;
+    }
+}
