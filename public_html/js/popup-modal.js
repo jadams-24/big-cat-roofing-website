@@ -323,7 +323,7 @@ class EstimateModal {
             if (window.emailjs && window.EMAILJS_CONFIG) {
                 // Format data to match EmailJS template
                 const emailParams = {
-                    to_email: 'Office@bigcatroofs.com',
+                    to_email: 'jordan@bigcatroofs.com',
                     from_name: 'Big Cat Roofing Website',
                     subject: `New Lead - ${data.service}`,
                     customer_name: data.name,
@@ -460,7 +460,7 @@ Source: ${data.source}
 Time: ${data.timestamp}
         `;
         
-        window.location.href = `mailto:Office@bigcatroofs.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        window.location.href = `mailto:jordan@bigcatroofs.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
         
         const messageDiv = this.modal.querySelector('#modal-message');
         this.showSuccessMessage(messageDiv);

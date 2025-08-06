@@ -124,7 +124,7 @@ function getFormData(form, formType) {
 // Send email notification to office
 async function sendEmailNotification(data) {
     const emailParams = {
-        to_email: 'Office@bigcatroofs.com',
+        to_email: 'jordan@bigcatroofs.com',
         from_name: 'Big Cat Roofing Website',
         subject: `New Lead from Big Cat Roofing Website - ${data.service || 'General Inquiry'}`,
         
@@ -295,7 +295,7 @@ function showErrorMessage(form, message) {
                 <p>${message}</p>
                 <p><strong>Alternative contact methods:</strong><br>
                 Call: <a href="tel:248-709-3746">248-709-3746</a><br>
-                Email: <a href="mailto:Office@bigcatroofs.com">Office@bigcatroofs.com</a></p>
+                Email: <a href="mailto:jordan@bigcatroofs.com">jordan@bigcatroofs.com</a></p>
             </div>
         </div>
     `;
