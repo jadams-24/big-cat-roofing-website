@@ -51,6 +51,14 @@ h4 {
 font-size: 2rem;
 margin-bottom: var(--spacing-sm);
 }
+h5 {
+font-size: 1.8rem;
+margin-bottom: var(--spacing-sm);
+}
+h6 {
+font-size: 1.6rem;
+margin-bottom: var(--spacing-sm);
+}
 p {
 margin-bottom: var(--spacing-sm);
 line-height: 1.6;
@@ -140,6 +148,7 @@ color: var(--secondary-gold);
 .main-nav {
 background-color: var(--white);
 padding: var(--spacing-sm) 0;
+font-size: 1.6rem;
 }
 .nav-wrapper {
 display: flex;
@@ -400,6 +409,7 @@ margin-bottom: 0.4rem;
 }
 section {
 padding: var(--spacing-3xl) 0;
+font-size: 1.6rem;
 }
 .section-header {
 text-align: center;
