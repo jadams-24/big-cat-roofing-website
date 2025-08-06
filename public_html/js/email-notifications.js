@@ -53,7 +53,7 @@ function setupFormSubmission(form, formType) {
         try {
             // Validate form
             if (!validateForm(form)) {
-                throw new Error('Please fill in all required fields correctly.');
+                throw new Error('Please provide your name and either a phone number or email address so we can contact you.');
             }
             
             // Check for spam/bot submissions
@@ -196,52 +196,47 @@ async function sendCustomerConfirmation(data) {
     }
 }
 
-// Enhanced form validation
+// Relaxed form validation - allows submission with minimal info
 function validateForm(form) {
-    const requiredFields = form.querySelectorAll('[required]');
-    let isValid = true;
-    
-    requiredFields.forEach(field => {
-        // Clear previous errors
+    // Clear any existing errors first
+    const allFields = form.querySelectorAll('input, select, textarea');
+    allFields.forEach(field => {
         field.classList.remove('error');
-        
-        // Check if field is empty
-        if (!field.value.trim()) {
-            isValid = false;
-            field.classList.add('error');
-            return;
-        }
-        
-        // Email validation
-        if (field.type === 'email') {
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(field.value)) {
-                isValid = false;
-                field.classList.add('error');
-            }
-        }
-        
-        // Phone validation (allow various formats)
-        if (field.type === 'tel') {
-            const phoneRegex = /^[\d\s\-\(\)\+\.]+$/;
-            const digitsOnly = field.value.replace(/\D/g, '');
-            if (!phoneRegex.test(field.value) || digitsOnly.length < 10) {
-                isValid = false;
-                field.classList.add('error');
-            }
-        }
-        
-        // Name validation (no numbers or special characters)
-        if (field.name === 'name') {
-            const nameRegex = /^[a-zA-Z\s\-\'\.]+$/;
-            if (!nameRegex.test(field.value)) {
-                isValid = false;
-                field.classList.add('error');
-            }
-        }
     });
     
-    return isValid;
+    // Check if we have at least some way to contact the customer
+    const name = form.querySelector('[name="name"]')?.value?.trim();
+    const phone = form.querySelector('[name="phone"]')?.value?.trim();
+    const email = form.querySelector('[name="email"]')?.value?.trim();
+    
+    // We need at least a name AND (phone OR email) to process the lead
+    if (!name || (!phone && !email)) {
+        // Highlight the problematic fields
+        if (!name) {
+            const nameField = form.querySelector('[name="name"]');
+            if (nameField) nameField.classList.add('error');
+        }
+        if (!phone && !email) {
+            const phoneField = form.querySelector('[name="phone"]');
+            const emailField = form.querySelector('[name="email"]');
+            if (phoneField) phoneField.classList.add('error');
+            if (emailField) emailField.classList.add('error');
+        }
+        return false;
+    }
+    
+    // Optional: Basic email format validation (only if email is provided)
+    if (email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            const emailField = form.querySelector('[name="email"]');
+            if (emailField) emailField.classList.add('error');
+            return false;
+        }
+    }
+    
+    // Allow form submission - service type and other fields are now optional
+    return true;
 }
 
 // Show success message
