@@ -26,13 +26,14 @@
     <link rel="icon" type="image/png" sizes="512x512" href="/web-app-manifest-512x512.png">
     
     <!-- Include existing CSS files -->
-    <link rel="stylesheet" href="css/combined.min.css">
-    <link rel="stylesheet" href="css/styles.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/combined.min.css" media="print" onload="this.media='all'; this.onload=null;">
+    <noscript><link rel="stylesheet" href="css/combined.min.css"></noscript>
+    <link rel="stylesheet" href="css/styles.min.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="css/responsive.min.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="css/popup-modal.min.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="css/city-page.min.css" media="print" onload="this.media='all'">
     <noscript>
-        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/styles.min.css">
         <link rel="stylesheet" href="css/responsive.min.css">
         <link rel="stylesheet" href="css/popup-modal.min.css">
         <link rel="stylesheet" href="css/city-page.min.css">
@@ -91,7 +92,7 @@
             <div class="container">
                 <div class="nav-wrapper">
                     <a href="/" class="logo">
-                        <img src="images/logos/logo-black.svg" alt="Big Cat Roofing" class="logo-header">
+                        <img src="images/logos/logo-black.svg" alt="Big Cat Roofing" class="logo-header" fetchpriority="high" width="260" height="78">
                     </a>
                     
                     <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false" type="button">
@@ -411,7 +412,7 @@
             </div>
             
             <div class="social-media-section">
-                <h4>Follow Big Cat Roofing</h4>
+                <h4>Follow Us!</h4>
                 <div class="social-icons">
                     <a href="https://www.facebook.com/profile.php?id=61556085317020" target="_blank" rel="noopener noreferrer" title="Follow Big Cat Roofing on Facebook">
                         <img src="assets/images/logos/icons8-facebook-logo-48.png" alt="Facebook" class="social-icon">
@@ -435,8 +436,8 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     
     <!-- Scripts -->
-    <script src="js/email-notifications.js"></script>
+    <script src="js/email-notifications.min.js"></script>
     <script src="js/main.min.js"></script>
-    <script src="js/popup-modal.js"></script>
+    <script src="js/popup-modal.min.js"></script>
 </body>
 </html>

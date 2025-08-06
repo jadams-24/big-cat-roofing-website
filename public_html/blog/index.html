@@ -46,26 +46,27 @@
     </style>
     
     <!-- Preload critical resources -->
-    <link rel="preload" href="../css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="../css/styles.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     
     <!-- Critical CSS (above-the-fold) loaded synchronously -->
-    <link rel="stylesheet" href="../css/combined.min.css">
+    <link rel="stylesheet" href="../css/combined.min.css" media="print" onload="this.media='all'; this.onload=null;">
+    <noscript><link rel="stylesheet" href="../css/combined.min.css"></noscript>
     
     <!-- Non-critical CSS loaded asynchronously -->
     <link rel="stylesheet" href="../css/responsive.min.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="../css/popup-modal.min.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="../css/business-info-improvements.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="../css/clickable-rating.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="../css/blog.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="../css/business-info-improvements.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="../css/clickable-rating.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="../css/blog.min.css" media="print" onload="this.media='all'">
     
     <!-- Fallback for no-JS users -->
     <noscript>
         <link rel="stylesheet" href="../css/responsive.min.css">
         <link rel="stylesheet" href="../css/popup-modal.min.css">
-        <link rel="stylesheet" href="../css/business-info-improvements.css">
-        <link rel="stylesheet" href="../css/clickable-rating.css">
-        <link rel="stylesheet" href="../css/blog.css">
+        <link rel="stylesheet" href="../css/business-info-improvements.min.css">
+        <link rel="stylesheet" href="../css/clickable-rating.min.css">
+        <link rel="stylesheet" href="../css/blog.min.css">
     </noscript>
     
     <!-- Leaflet CSS - Deferred -->
@@ -120,7 +121,7 @@
             <div class="container">
                 <div class="nav-wrapper">
                     <a href="../" class="logo">
-                        <img src="../images/logos/logo-black.svg" alt="Big Cat Roofing" class="logo-header">
+                        <img src="../images/logos/logo-black.svg" alt="Big Cat Roofing" class="logo-header" fetchpriority="high" width="260" height="78">
                     </a>
                     
                     <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false" type="button">
@@ -581,7 +582,7 @@
             </div>
             
             <div class="social-media-section">
-                <h4>Follow Big Cat Roofing</h4>
+                <h4>Follow Us!</h4>
                 <div class="social-icons">
                     <a href="https://www.facebook.com/profile.php?id=61556085317020" target="_blank" rel="noopener noreferrer" title="Follow Big Cat Roofing on Facebook">
                         <img src="assets/images/logos/icons8-facebook-logo-48.png" alt="Facebook" class="social-icon">
@@ -605,9 +606,9 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     
     <!-- Scripts - Optimized loading -->
-    <script src="../js/email-notifications.js" defer></script>
+    <script src="../js/email-notifications.min.js" defer></script>
     <script src="../js/main.min.js" defer></script>
-    <script src="../js/popup-modal.js" defer></script>
-    <script src="../js/blog.js" defer></script>
+    <script src="../js/popup-modal.min.js" defer></script>
+    <script src="../js/blog.min.js" defer></script>
 </body>
 </html>

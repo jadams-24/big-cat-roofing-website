@@ -26,12 +26,13 @@
     <link rel="canonical" href="https://bigcatroofs.com/commercial-roofing.html">
     
     <!-- CSS Files -->
-    <link rel="stylesheet" href="css/combined.min.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/combined.min.css" media="print" onload="this.media='all'; this.onload=null;">
+    <noscript><link rel="stylesheet" href="css/combined.min.css"></noscript>
+    <link rel="stylesheet" href="css/styles.min.css">
     <link rel="stylesheet" href="css/responsive.min.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="css/popup-modal.min.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="css/mulehide-certification.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="css/commercial-roofing-centering.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/mulehide-certification.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/commercial-roofing-centering.min.css" media="print" onload="this.media='all'">
     
     <!-- Preload critical resources -->
     <link rel="preload" href="images/logos/logo-black.svg" as="image" type="image/svg+xml">
@@ -129,7 +130,7 @@
             <div class="container">
                 <div class="nav-wrapper">
                     <a href="/" class="logo">
-                        <img src="images/logos/logo-black.svg" alt="Big Cat Roofing" class="logo-header" width="260" height="78" fetchpriority="high">
+                        <img src="images/logos/logo-black.svg" alt="Big Cat Roofing" class="logo-header" fetchpriority="high" width="260" height="78">
                     </a>
                     
                     <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false" type="button">
@@ -642,7 +643,7 @@
             </div>
             
             <div class="social-media-section">
-                <h4>Follow Big Cat Roofing</h4>
+                <h4>Follow Us!</h4>
                 <div class="social-icons">
                     <a href="https://www.facebook.com/profile.php?id=61556085317020" target="_blank" rel="noopener noreferrer" title="Follow Big Cat Roofing on Facebook">
                         <img src="assets/images/logos/icons8-facebook-logo-48.png" alt="Facebook" class="social-icon">
@@ -666,8 +667,8 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     
     <!-- Scripts - Optimized loading -->
-    <script src="js/email-notifications.js" defer></script>
+    <script src="js/email-notifications.min.js" defer></script>
     <script src="js/main.min.js" defer></script>
-    <script src="js/popup-modal.js" defer></script>
+    <script src="js/popup-modal.min.js" defer></script>
 </body>
 </html>

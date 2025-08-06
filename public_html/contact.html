@@ -61,28 +61,149 @@
     
     <!-- Preload critical resources -->
     <link rel="preload" href="images/logos/logo-black.svg" as="image" type="image/svg+xml">
-    <link rel="preload" href="css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="css/styles.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2" as="font" type="font/woff2" crossorigin>
     
     <!-- Critical CSS (above-the-fold) loaded synchronously -->
-    <link rel="stylesheet" href="css/combined.min.css">
+    <link rel="stylesheet" href="css/combined.min.css" media="print" onload="this.media='all'; this.onload=null;">
+    <noscript><link rel="stylesheet" href="css/combined.min.css"></noscript>
     
     <!-- Non-critical CSS loaded asynchronously -->
     <link rel="stylesheet" href="css/responsive.min.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="css/popup-modal.min.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="css/business-info-improvements.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/business-info-improvements.min.css" media="print" onload="this.media='all'">
     
     <!-- Fallback for no-JS users -->
     <noscript>
         <link rel="stylesheet" href="css/responsive.min.css">
         <link rel="stylesheet" href="css/popup-modal.min.css">
-        <link rel="stylesheet" href="css/business-info-improvements.css">
+        <link rel="stylesheet" href="css/business-info-improvements.min.css">
     </noscript>
     
     <noscript>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
     </noscript>
+
+    <!-- ContactPage Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "mainEntity": {
+            "@type": "RoofingContractor",
+            "name": "Big Cat Roofing",
+            "@id": "https://bigcatroofs.com/#organization",
+            "url": "https://bigcatroofs.com/",
+            "telephone": "248-709-3746",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "22935 Lambrecht Ave",
+                "addressLocality": "Eastpointe",
+                "addressRegion": "MI",
+                "postalCode": "48021",
+                "addressCountry": "US"
+            },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 42.4584,
+                "longitude": -82.9321
+            },
+            "areaServed": [
+                {
+                    "@type": "City",
+                    "name": "Warren",
+                    "containedInPlace": {
+                        "@type": "State",
+                        "name": "Michigan"
+                    }
+                },
+                {
+                    "@type": "City", 
+                    "name": "Sterling Heights",
+                    "containedInPlace": {
+                        "@type": "State",
+                        "name": "Michigan"
+                    }
+                },
+                {
+                    "@type": "City",
+                    "name": "Troy",
+                    "containedInPlace": {
+                        "@type": "State",
+                        "name": "Michigan"
+                    }
+                },
+                {
+                    "@type": "City",
+                    "name": "Detroit",
+                    "containedInPlace": {
+                        "@type": "State",
+                        "name": "Michigan"
+                    }
+                }
+            ],
+            "openingHours": "Mo-Sa 08:00-18:00",
+            "contactPoint": [
+                {
+                    "@type": "ContactPoint",
+                    "telephone": "248-709-3746",
+                    "contactType": "customer service",
+                    "availableLanguage": "English",
+                    "hoursAvailable": "Mo-Sa 08:00-18:00"
+                },
+                {
+                    "@type": "ContactPoint",
+                    "telephone": "248-709-3746",
+                    "contactType": "emergency",
+                    "availableLanguage": "English",
+                    "hoursAvailable": "24/7"
+                }
+            ],
+            "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Roofing Services",
+                "itemListElement": [
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Residential Roofing",
+                            "description": "Complete residential roof installation, repair, and replacement services"
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Commercial Roofing",
+                            "description": "Professional commercial roofing solutions for businesses"
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Emergency Roof Repair",
+                            "description": "24/7 emergency roof repair and storm damage restoration"
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Gutter Services",
+                            "description": "Gutter installation, repair, and maintenance services"
+                        }
+                    }
+                ]
+            },
+            "priceRange": "$$",
+            "paymentAccepted": "Cash, Check, Credit Card, Insurance Claims",
+            "currenciesAccepted": "USD"
+        }
+    }
+    </script>
 </head>
 <body>
     <!-- Header Navigation -->
@@ -105,7 +226,7 @@
             <div class="container">
                 <div class="nav-wrapper">
                     <a href="/" class="logo">
-                        <img src="images/logos/logo-black.svg" alt="Big Cat Roofing" class="logo-header" width="260" height="78" fetchpriority="high">
+                        <img src="images/logos/logo-black.svg" alt="Big Cat Roofing" class="logo-header" fetchpriority="high" width="260" height="78">
                     </a>
                     
                     <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false" type="button">
@@ -446,7 +567,7 @@
             </div>
             
             <div class="social-media-section">
-                <h4>Follow Big Cat Roofing</h4>
+                <h4>Follow Us!</h4>
                 <div class="social-icons">
                     <a href="https://www.facebook.com/profile.php?id=61556085317020" target="_blank" rel="noopener noreferrer" title="Follow Big Cat Roofing on Facebook">
                         <img src="assets/images/logos/icons8-facebook-logo-48.png" alt="Facebook" class="social-icon">
@@ -475,11 +596,11 @@
     <script>
         function loadContactScripts() {
             const emailScript = document.createElement('script');
-            emailScript.src = 'js/email-notifications.js';
+            emailScript.src = 'js/email-notifications.min.js';
             emailScript.defer = true;
             emailScript.onload = function() {
                 const popupScript = document.createElement('script');
-                popupScript.src = 'js/popup-modal.js';
+                popupScript.src = 'js/popup-modal.min.js';
                 popupScript.defer = true;
                 document.head.appendChild(popupScript);
             };

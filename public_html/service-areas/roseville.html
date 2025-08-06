@@ -27,8 +27,9 @@
     <link rel="canonical" href="https://bigcatroofs.com/service-areas/roseville.html">
     
     <!-- CSS Files -->
-    <link rel="stylesheet" href="../css/combined.min.css">
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/combined.min.css" media="print" onload="this.media='all'; this.onload=null;">
+    <noscript><link rel="stylesheet" href="../css/combined.min.css"></noscript>
+    <link rel="stylesheet" href="../css/styles.min.css">
     <link rel="stylesheet" href="../css/responsive.min.css">
     
     <!-- Google Fonts -->
@@ -89,7 +90,7 @@
             <div class="container">
                 <div class="nav-wrapper">
                     <a href="/" class="logo">
-                        <img src="../images/logos/logo-black.svg" alt="Big Cat Roofing" class="logo-header">
+                        <img src="../images/logos/logo-black.svg" alt="Big Cat Roofing" class="logo-header" fetchpriority="high" width="260" height="78">
                     </a>
                     
                     <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false" type="button">
@@ -304,8 +305,8 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     
     <!-- Scripts - Optimized loading -->
-    <script src="../js/email-notifications.js" defer></script>
+    <script src="../js/email-notifications.min.js" defer></script>
     <script src="../js/main.min.js" defer></script>
-    <script src="../js/popup-modal.js" defer></script>
+    <script src="../js/popup-modal.min.js" defer></script>
 </body>
 </html>

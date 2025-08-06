@@ -67,25 +67,26 @@
     
     <!-- Preload critical resources -->
     <link rel="preload" href="images/logos/logo-black.svg" as="image" type="image/svg+xml">
-    <link rel="preload" href="css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="css/styles.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2" as="font" type="font/woff2" crossorigin>
     
     <!-- Critical CSS (above-the-fold) loaded synchronously -->
-    <link rel="stylesheet" href="css/combined.min.css">
+    <link rel="stylesheet" href="css/combined.min.css" media="print" onload="this.media='all'; this.onload=null;">
+    <noscript><link rel="stylesheet" href="css/combined.min.css"></noscript>
     
     <!-- Non-critical CSS loaded asynchronously -->
     <link rel="stylesheet" href="css/responsive.min.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="css/popup-modal.min.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="css/business-info-improvements.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="css/clickable-rating.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/business-info-improvements.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/clickable-rating.min.css" media="print" onload="this.media='all'">
     
     <!-- Fallback for no-JS users -->
     <noscript>
         <link rel="stylesheet" href="css/responsive.min.css">
         <link rel="stylesheet" href="css/popup-modal.min.css">
-        <link rel="stylesheet" href="css/business-info-improvements.css">
-        <link rel="stylesheet" href="css/clickable-rating.css">
+        <link rel="stylesheet" href="css/business-info-improvements.min.css">
+        <link rel="stylesheet" href="css/clickable-rating.min.css">
     </noscript>
     
     <!-- Leaflet CSS - Deferred -->
@@ -195,7 +196,7 @@
             <div class="container">
                 <div class="nav-wrapper">
                     <a href="/" class="logo">
-                        <img src="images/logos/logo-black.svg" alt="Big Cat Roofing" class="logo-header" width="260" height="78" fetchpriority="high">
+                        <img src="images/logos/logo-black.svg" alt="Big Cat Roofing" class="logo-header" fetchpriority="high" width="260" height="78">
                     </a>
                     
                     <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false" type="button">
@@ -324,7 +325,7 @@
                         <li>Shingle Installation</li>
                         <li>Emergency Services</li>
                     </ul>
-                    <a href="residential-roofing.html" class="btn btn-outline" title="Learn more about our residential roofing services" aria-label="Learn more about residential roofing services">Learn More</a>
+                    <a href="residential-roofing.html" class="btn btn-outline" title="Learn more about our residential roofing services" aria-label="Learn more about residential roofing services">Get Free Residential Roofing Quote</a>
                 </div>
                 
                 <div class="service-card">
@@ -341,7 +342,7 @@
                         <li>Bi-Annual Inspections</li>
                         <li>Maintenance Programs</li>
                     </ul>
-                    <a href="commercial-roofing.html" class="btn btn-outline" title="Learn more about our commercial roofing services" aria-label="Learn more about commercial roofing services">Learn More</a>
+                    <a href="commercial-roofing.html" class="btn btn-outline" title="Learn more about our commercial roofing services" aria-label="Learn more about commercial roofing services">Commercial Roofing Services</a>
                 </div>
                 
                 <div class="service-card">
@@ -361,7 +362,7 @@
                         <li>Free Inspections</li>
                         <li>Storm Damage Repair</li>
                     </ul>
-                    <a href="gutter-services.html" class="btn btn-outline" title="Learn more about our gutter and additional services" aria-label="Learn more about gutter and additional services">Learn More</a>
+                    <a href="gutter-services.html" class="btn btn-outline" title="Learn more about our gutter and additional services" aria-label="Learn more about gutter and additional services">Professional Gutter Installation</a>
                 </div>
             </div>
         </div>
@@ -509,10 +510,20 @@
                 
                 <div class="areas-map">
                     <div class="compact-map-container">
-                        <div id="homepage-service-map"></div>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d742239.2856905826!2d-83.5034313!3d42.4583945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8824b8f2b1d8c8b7%3A0x2a8b8b8b8b8b8b8b!2sMacomb%20County%2C%20MI!5e0!3m2!1sen!2sus!4v1699999999999!5m2!1sen!2sus&z=9"
+                            width="100%" 
+                            height="350" 
+                            style="border:0; border-radius: 12px;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Big Cat Roofing Service Area - Macomb, Oakland, and Wayne Counties Michigan"
+                            aria-label="Map showing Big Cat Roofing service area covering Macomb County, Oakland County, and Wayne County in Michigan">
+                        </iframe>
                         <div class="map-overlay">
-                            <h4>Interactive Service Area Map</h4>
-                            <p>Click to explore our full coverage area</p>
+                            <h4>Our Service Area</h4>
+                            <p>Macomb • Oakland • Wayne Counties</p>
                         </div>
                     </div>
                 </div>
@@ -794,7 +805,7 @@
             </div>
             
             <div class="social-media-section">
-                <h4>Follow Big Cat Roofing</h4>
+                <h4>Follow Us!</h4>
                 <div class="social-icons">
                     <a href="https://www.facebook.com/profile.php?id=61556085317020" target="_blank" rel="noopener noreferrer" title="Follow Big Cat Roofing on Facebook">
                         <img src="assets/images/logos/icons8-facebook-logo-48.png" alt="Facebook" class="social-icon">
@@ -824,11 +835,11 @@
     <script>
         function loadEmailScripts() {
             const emailScript = document.createElement('script');
-            emailScript.src = 'js/email-notifications.js';
+            emailScript.src = 'js/email-notifications.min.js';
             emailScript.defer = true;
             emailScript.onload = function() {
                 const popupScript = document.createElement('script');
-                popupScript.src = 'js/popup-modal.js';
+                popupScript.src = 'js/popup-modal.min.js';
                 popupScript.defer = true;
                 document.head.appendChild(popupScript);
             };
@@ -840,7 +851,7 @@
             leafletScript.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
             leafletScript.onload = function() {
                 const mapScript = document.createElement('script');
-                mapScript.src = 'js/service-area-map.js';
+                mapScript.src = 'js/service-area-map.min.js';
                 mapScript.defer = true;
                 document.head.appendChild(mapScript);
             };

@@ -6,6 +6,7 @@
     --primary-gold: #C8AF6A;
     --secondary-gold: #d6c28f;
     --accent-gold: #ba9a45;
+    --accessible-gold: #8B7632;  /* Darker gold for WCAG AA compliance (4.5:1 contrast) */
     --black: #000000;
     --white: #ffffff;
     --dark-gray: #1a1a1a;
@@ -1885,7 +1886,7 @@ section {
 
 /* Service Areas Grid Updates */
 .areas-grid .area-column ul li a {
-    color: var(--primary-gold);
+    color: var(--accessible-gold);
     text-decoration: none;
     font-weight: 600;
     transition: color var(--transition-base);
@@ -3492,15 +3493,18 @@ section {
 }
 
 .social-media-section h4 {
-    color: #d4af37;
+    color: var(--primary-gold);
     margin-bottom: 1rem;
-    font-size: 1.2rem;
+    font-size: 1.8rem;
+    font-weight: 600;
 }
 
 .social-icons {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 1.5rem;
+    flex-direction: row;
     flex-wrap: wrap;
 }
 

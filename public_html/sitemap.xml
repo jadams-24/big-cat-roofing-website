@@ -4,14 +4,14 @@
   <!-- Homepage - Main Pages (Priority: 1.0, changefreq: weekly) -->
   <url>
     <loc>https://bigcatroofs.com/</loc>
-    <lastmod>2025-08-05</lastmod>
+    <lastmod>2025-08-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
     <loc>https://bigcatroofs.com/index.html</loc>
-    <lastmod>2025-08-05</lastmod>
+    <lastmod>2025-08-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -19,358 +19,366 @@
   <!-- Service Pages (Priority: 0.9, changefreq: monthly) -->
   <url>
     <loc>https://bigcatroofs.com/residential-roofing.html</loc>
-    <lastmod>2025-08-05</lastmod>
+    <lastmod>2025-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
     <loc>https://bigcatroofs.com/commercial-roofing.html</loc>
-    <lastmod>2025-08-05</lastmod>
+    <lastmod>2025-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
     <loc>https://bigcatroofs.com/gutter-services.html</loc>
-    <lastmod>2025-08-05</lastmod>
+    <lastmod>2025-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
     <loc>https://bigcatroofs.com/storm-repair.html</loc>
-    <lastmod>2025-08-05</lastmod>
+    <lastmod>2025-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   
-  <!-- City Service Pages (Priority: 0.8, changefreq: monthly) -->
+  <!-- Major City Service Pages (Priority: 0.8, changefreq: monthly) -->
   <url>
     <loc>https://bigcatroofs.com/warren-roofing.html</loc>
-    <lastmod>2025-08-05</lastmod>
+    <lastmod>2025-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://bigcatroofs.com/sterling-heights-roofing.html</loc>
-    <lastmod>2025-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigcatroofs.com/eastpointe-roofing.html</loc>
-    <lastmod>2025-08-05</lastmod>
+    <lastmod>2025-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://bigcatroofs.com/troy-roofing.html</loc>
-    <lastmod>2025-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigcatroofs.com/roseville-roofing.html</loc>
-    <lastmod>2025-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigcatroofs.com/royal-oak-roofing.html</loc>
-    <lastmod>2025-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigcatroofs.com/ferndale-roofing.html</loc>
-    <lastmod>2025-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigcatroofs.com/grosse-pointe-roofing.html</loc>
-    <lastmod>2025-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigcatroofs.com/madison-heights-roofing.html</loc>
-    <lastmod>2025-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigcatroofs.com/hazel-park-roofing.html</loc>
-    <lastmod>2025-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigcatroofs.com/clinton-township-roofing.html</loc>
-    <lastmod>2025-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigcatroofs.com/fraser-roofing.html</loc>
-    <lastmod>2025-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigcatroofs.com/st-clair-shores-roofing.html</loc>
-    <lastmod>2025-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigcatroofs.com/oak-park-roofing.html</loc>
-    <lastmod>2025-08-05</lastmod>
+    <lastmod>2025-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://bigcatroofs.com/detroit-roofing.html</loc>
-    <lastmod>2025-08-05</lastmod>
+    <lastmod>2025-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  
+  <!-- Other City Service Pages (Priority: 0.7, changefreq: monthly) -->
+  <url>
+    <loc>https://bigcatroofs.com/eastpointe-roofing.html</loc>
+    <lastmod>2025-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigcatroofs.com/roseville-roofing.html</loc>
+    <lastmod>2025-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigcatroofs.com/royal-oak-roofing.html</loc>
+    <lastmod>2025-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigcatroofs.com/ferndale-roofing.html</loc>
+    <lastmod>2025-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigcatroofs.com/grosse-pointe-roofing.html</loc>
+    <lastmod>2025-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigcatroofs.com/madison-heights-roofing.html</loc>
+    <lastmod>2025-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigcatroofs.com/hazel-park-roofing.html</loc>
+    <lastmod>2025-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigcatroofs.com/clinton-township-roofing.html</loc>
+    <lastmod>2025-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigcatroofs.com/fraser-roofing.html</loc>
+    <lastmod>2025-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigcatroofs.com/st-clair-shores-roofing.html</loc>
+    <lastmod>2025-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigcatroofs.com/oak-park-roofing.html</loc>
+    <lastmod>2025-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   
   <url>
     <loc>https://bigcatroofs.com/center-line-roofing.html</loc>
-    <lastmod>2025-08-05</lastmod>
+    <lastmod>2025-08-06</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   
   <url>
     <loc>https://bigcatroofs.com/mount-clemens-roofing.html</loc>
-    <lastmod>2025-08-05</lastmod>
+    <lastmod>2025-08-06</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   
   <url>
     <loc>https://bigcatroofs.com/huntington-woods-roofing.html</loc>
-    <lastmod>2025-08-05</lastmod>
+    <lastmod>2025-08-06</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   
   <url>
     <loc>https://bigcatroofs.com/clawson-roofing.html</loc>
-    <lastmod>2025-08-05</lastmod>
+    <lastmod>2025-08-06</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   
   <url>
     <loc>https://bigcatroofs.com/macomb-roofing.html</loc>
-    <lastmod>2025-08-05</lastmod>
+    <lastmod>2025-08-06</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   
   <url>
     <loc>https://bigcatroofs.com/harrison-township-roofing.html</loc>
-    <lastmod>2025-08-05</lastmod>
+    <lastmod>2025-08-06</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   
-  <!-- Blog Pages (Priority: 0.7, changefreq: weekly for index, monthly for posts) -->
+  <!-- Contact and Service Area Pages (Priority: 0.7, changefreq: monthly) -->
+  <url>
+    <loc>https://bigcatroofs.com/contact.html</loc>
+    <lastmod>2025-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigcatroofs.com/service-areas.html</loc>
+    <lastmod>2025-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Pages (Priority: 0.7 for index, 0.6 for posts, changefreq: weekly for index, yearly for posts) -->
   <url>
     <loc>https://bigcatroofs.com/blog/</loc>
-    <lastmod>2025-08-05</lastmod>
+    <lastmod>2025-08-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>https://bigcatroofs.com/blog/index.html</loc>
-    <lastmod>2025-08-05</lastmod>
+    <lastmod>2025-08-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
+  <url>
+    <loc>https://bigcatroofs.com/blog/complete-guide-roof-types-homeowners.html</loc>
+    <lastmod>2025-08-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigcatroofs.com/blog/winter-roof-damage-prevention-warren.html</loc>
+    <lastmod>2025-08-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
   <!-- Blog Posts -->
   <url>
-    <loc>https://bigcatroofs.com/blog/posts/summer-roof-maintenance-metro-detroit.html</loc>
-    <lastmod>2025-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigcatroofs.com/blog/posts/spring-storm-damage-warren.html</loc>
-    <lastmod>2025-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigcatroofs.com/blog/posts/roofing-warranty-guide.html</loc>
-    <lastmod>2025-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigcatroofs.com/blog/posts/roof-replacement-signs.html</loc>
-    <lastmod>2025-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigcatroofs.com/blog/posts/michigan-roof-lifespan.html</loc>
-    <lastmod>2025-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigcatroofs.com/blog/posts/ice-dam-prevention-michigan-2025.html</loc>
-    <lastmod>2025-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigcatroofs.com/blog/posts/gutter-installation-sterling-heights.html</loc>
-    <lastmod>2025-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigcatroofs.com/blog/posts/gaf-vs-competitors.html</loc>
-    <lastmod>2025-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigcatroofs.com/blog/posts/fall-roof-preparation.html</loc>
-    <lastmod>2025-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigcatroofs.com/blog/posts/emergency-roof-repair.html</loc>
-    <lastmod>2025-08-05</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://bigcatroofs.com/blog/posts/commercial-flat-roof-inspection.html</loc>
+    <lastmod>2025-08-06</lastmod>
+    <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://bigcatroofs.com/blog/posts/commercial-roof-maintenance.html</loc>
-    <lastmod>2025-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigcatroofs.com/blog/posts/commercial-flat-roof-inspection.html</loc>
-    <lastmod>2025-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <!-- New Blog Posts -->
-  <url>
-    <loc>https://bigcatroofs.com/blog/winter-roof-damage-prevention-warren.html</loc>
-    <lastmod>2025-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://bigcatroofs.com/blog/complete-guide-roof-types-homeowners.html</loc>
-    <lastmod>2025-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <!-- Other Pages (Priority: 0.6, changefreq: yearly) -->
-  <url>
-    <loc>https://bigcatroofs.com/contact.html</loc>
-    <lastmod>2025-08-05</lastmod>
+    <lastmod>2025-08-06</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://bigcatroofs.com/privacy.html</loc>
-    <lastmod>2025-08-05</lastmod>
+    <loc>https://bigcatroofs.com/blog/posts/emergency-roof-repair.html</loc>
+    <lastmod>2025-08-06</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://bigcatroofs.com/service-areas.html</loc>
-    <lastmod>2025-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://bigcatroofs.com/blog/posts/fall-roof-preparation.html</loc>
+    <lastmod>2025-08-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://bigcatroofs.com/404.html</loc>
-    <lastmod>2025-08-05</lastmod>
+    <loc>https://bigcatroofs.com/blog/posts/gaf-vs-competitors.html</loc>
+    <lastmod>2025-08-06</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.1</priority>
+    <priority>0.6</priority>
   </url>
   
-  <!-- Service Area Directory Pages -->
+  <url>
+    <loc>https://bigcatroofs.com/blog/posts/gutter-installation-sterling-heights.html</loc>
+    <lastmod>2025-08-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigcatroofs.com/blog/posts/ice-dam-prevention-michigan-2025.html</loc>
+    <lastmod>2025-08-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigcatroofs.com/blog/posts/michigan-roof-lifespan.html</loc>
+    <lastmod>2025-08-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigcatroofs.com/blog/posts/roof-replacement-signs.html</loc>
+    <lastmod>2025-08-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigcatroofs.com/blog/posts/roofing-warranty-guide.html</loc>
+    <lastmod>2025-08-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigcatroofs.com/blog/posts/spring-storm-damage-warren.html</loc>
+    <lastmod>2025-08-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigcatroofs.com/blog/posts/summer-roof-maintenance-metro-detroit.html</loc>
+    <lastmod>2025-08-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Service Area Directory Pages (Priority: 0.7, changefreq: monthly) -->
   <url>
     <loc>https://bigcatroofs.com/service-areas/warren.html</loc>
-    <lastmod>2025-08-05</lastmod>
+    <lastmod>2025-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>https://bigcatroofs.com/service-areas/sterling-heights.html</loc>
-    <lastmod>2025-08-05</lastmod>
+    <lastmod>2025-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>https://bigcatroofs.com/service-areas/royal-oak.html</loc>
-    <lastmod>2025-08-05</lastmod>
+    <lastmod>2025-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>https://bigcatroofs.com/service-areas/roseville.html</loc>
-    <lastmod>2025-08-05</lastmod>
+    <lastmod>2025-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>https://bigcatroofs.com/service-areas/grosse-pointe.html</loc>
-    <lastmod>2025-08-05</lastmod>
+    <lastmod>2025-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigcatroofs.com/service-areas/ferndale.html</loc>
+    <lastmod>2025-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Other Pages (Priority: 0.5 and lower, changefreq: yearly) -->
+  <url>
+    <loc>https://bigcatroofs.com/privacy.html</loc>
+    <lastmod>2025-08-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  
+  <url>
+    <loc>https://bigcatroofs.com/404.html</loc>
+    <lastmod>2025-08-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.1</priority>
   </url>
   
 </urlset>
