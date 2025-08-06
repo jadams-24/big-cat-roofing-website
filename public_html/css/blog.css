@@ -244,3 +244,25 @@
         color: #cccccc;
     }
 }
+
+/* Fix deprecated API warnings - Explicit font-size for semantic elements */
+article {
+    font-size: 1.6rem;
+}
+
+aside {
+    font-size: 1.4rem;
+}
+
+/* Blog-specific article and aside styles */
+.blog-post {
+    font-size: 1.6rem;
+}
+
+.blog-card {
+    font-size: 1.4rem;
+}
+
+.blog-sidebar {
+    font-size: 1.4rem;
+}

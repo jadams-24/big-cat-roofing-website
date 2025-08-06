@@ -116,3 +116,17 @@ RewriteRule ^([^\.]+)$ $1.html [NC,L]
 
 # Prevent directory browsing
 Options -Indexes
+
+# Fix charset encoding in HTTP headers
+AddDefaultCharset UTF-8
+
+# Set Content-Type with charset for HTML files
+<FilesMatch "\.html?$">
+    Header set Content-Type "text/html; charset=UTF-8"
+</FilesMatch>
+
+# Enable charset for text files
+AddCharset UTF-8 .html
+AddCharset UTF-8 .htm
+AddCharset UTF-8 .css
+AddCharset UTF-8 .js

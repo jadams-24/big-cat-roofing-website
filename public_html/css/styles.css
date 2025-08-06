@@ -44,6 +44,10 @@ body {
     max-width: var(--container-max);
     margin: 0 auto;
     padding: 0 var(--spacing-md);
+    /* Layout stability optimizations */
+    contain: layout;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* Typography */
@@ -399,13 +403,21 @@ body.menu-open {
     position: relative;
 }
 
-/* Hero Section */
+/* Hero Section - Optimized for Layout Stability */
 .hero {
     position: relative;
     background-image: linear-gradient(135deg, var(--dark-gray) 0%, rgba(26, 26, 26, 0.9) 100%);
     color: var(--white);
     padding: var(--spacing-3xl) 0;
     overflow: hidden;
+    /* Prevent layout shift with minimum height */
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    /* Force GPU layer for better performance */
+    will-change: transform;
+    transform: translateZ(0);
+    contain: layout style paint;
 }
 
 .hero::before {
@@ -426,6 +438,13 @@ body.menu-open {
     text-align: center;
     position: relative;
     z-index: 1;
+    width: 100%;
+    /* Reserve space for content */
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    contain: layout style;
 }
 
 .hero-title {
@@ -469,6 +488,8 @@ body.menu-open {
     background-color: var(--light-gray);
     padding: var(--spacing-lg) 0;
     border-bottom: 1px solid #e0e0e0;
+    /* Prevent layout shift */
+    min-height: 140px;
 }
 
 .trust-items {
@@ -479,6 +500,8 @@ body.menu-open {
     gap: 60px;
     max-width: 800px;
     margin: 0 auto;
+    /* Prevent layout shift */
+    min-height: 100px;
 }
 
 .trust-item {
@@ -489,13 +512,22 @@ body.menu-open {
     font-weight: 600;
     color: var(--dark-gray);
     text-align: center;
+    /* Reserve space for badges */
+    min-width: 120px;
+    min-height: 100px;
 }
 
 .trust-item img {
-    height: 60px;
-    width: auto;
+    height: 80px;
+    width: 80px;
     opacity: 0.9;
     transition: opacity var(--transition-base);
+    /* Maintain aspect ratio and prevent layout shift */
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    /* Force compositing layer */
+    will-change: opacity;
+    transform: translateZ(0);
 }
 
 .trust-item:hover img {
@@ -509,6 +541,13 @@ body.menu-open {
 
 .rating {
     text-align: center;
+    /* Reserve space for rating element */
+    min-height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 140px;
+    contain: layout;
 }
 
 .stars {
@@ -517,15 +556,24 @@ body.menu-open {
     margin-bottom: 0.4rem;
 }
 
-/* Section Styles */
+/* Section Styles - Optimized for Layout Stability */
 section {
     padding: var(--spacing-3xl) 0;
     font-size: 1.6rem;
+    /* Prevent layout shift */
+    contain: layout style;
+    min-height: 200px;
 }
 
 .section-header {
     text-align: center;
     margin-bottom: var(--spacing-2xl);
+    /* Reserve space for headers */
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    contain: layout;
 }
 
 .section-header p {
@@ -1852,34 +1900,7 @@ section {
     height: 100%;
 }
 
-.map-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(200, 175, 106, 0.95);
-    color: var(--white);
-    padding: var(--spacing-lg);
-    border-radius: 8px;
-    text-align: center;
-    opacity: 0.8;
-    transition: opacity var(--transition-base);
-    pointer-events: none;
-    backdrop-filter: blur(5px);
-}
-
-.map-overlay h4 {
-    color: var(--white);
-    font-size: 1.8rem;
-    margin-bottom: var(--spacing-xs);
-}
-
-.map-overlay p {
-    color: var(--white);
-    font-size: 1.4rem;
-    margin: 0;
-    opacity: 0.9;
-}
+/* Map overlay removed - no longer showing text overlay on map */
 
 /* Compact Map Markers */
 .compact-hq-marker {
@@ -1922,13 +1943,18 @@ section {
 
 .gaf-certified-badge {
     width: 120px;
-    height: auto;
-    max-width: 100%;
+    height: 120px;
     transition: all var(--transition-base);
     filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.1));
     /* Ensure diamond shape maintains crisp edges */
     image-rendering: -webkit-optimize-contrast;
     image-rendering: crisp-edges;
+    /* Layout stability optimizations */
+    object-fit: contain;
+    aspect-ratio: 1/1;
+    will-change: transform, filter;
+    transform: translateZ(0);
+    contain: layout size style;
 }
 
 .gaf-certified-link:hover .gaf-certified-badge {
@@ -1968,13 +1994,18 @@ section {
 
 .mulehide-certified-badge {
     width: 120px;
-    height: auto;
-    max-width: 100%;
+    height: 120px;
     transition: all var(--transition-base);
     filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.1));
     /* Maintain logo quality */
     image-rendering: -webkit-optimize-contrast;
     image-rendering: crisp-edges;
+    /* Layout stability optimizations */
+    object-fit: contain;
+    aspect-ratio: 1/1;
+    will-change: transform, filter;
+    transform: translateZ(0);
+    contain: layout size style;
 }
 
 .mulehide-certified-link:hover .mulehide-certified-badge {
