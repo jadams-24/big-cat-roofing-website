@@ -167,6 +167,11 @@ class EstimateModal {
             const text = button.textContent.toLowerCase().trim();
             const href = button.getAttribute('href') || '';
             
+            // Skip form submit buttons - let them submit to Formspree naturally
+            if (button.type === 'submit' || button.closest('form')) {
+                return;
+            }
+            
             if (
                 text.includes('free estimate') ||
                 text.includes('get estimate') ||

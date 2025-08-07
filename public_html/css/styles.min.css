@@ -480,8 +480,10 @@ background-color: var(--light-gray);
 }
 .benefits-grid {
 display: grid;
-grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+grid-template-columns: repeat(3, 1fr);
 gap: var(--spacing-lg);
+max-width: 1200px;
+margin: 0 auto;
 }
 .benefit {
 text-align: center;

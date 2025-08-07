@@ -236,7 +236,9 @@ document.addEventListener('DOMContentLoaded', function() {
             
             if (!isValid) {
                 e.preventDefault();
+                return false;
             }
+            // If validation passes, allow natural form submission to proceed
         });
         
         // Remove error class on input

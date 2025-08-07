@@ -30,6 +30,12 @@
     .estimator-iframe-wrapper iframe {
         height: 550px;
     }
+    
+    /* Benefits Grid - Tablet: 2 columns */
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-lg);
+    }
 
     /* Footer */
     .footer-content {
