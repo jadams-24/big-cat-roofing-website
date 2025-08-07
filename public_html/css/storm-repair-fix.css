@@ -1,0 +1,71 @@
+/* Big Cat Roofing - Storm Repair Page Fix */
+/* Remove blank white box/logo from top right corner */
+
+/* Hide any empty or broken images in header */
+.main-header img[src=""],
+.main-header img[src="#"],
+.main-nav img[src=""],
+.main-nav img[src="#"] {
+    display: none !important;
+}
+
+/* Hide any empty divs in header that might be causing white boxes */
+.main-header .nav-wrapper > div:empty,
+.main-nav .nav-wrapper > div:empty {
+    display: none !important;
+}
+
+/* Ensure no pseudo-elements are creating white boxes in header */
+.main-header *::before,
+.main-header *::after {
+    background: transparent !important;
+}
+
+/* Remove any potential floating elements in header top-right */
+.main-header .nav-wrapper > *:last-child:not(.nav-menu):not(.mobile-menu-toggle) {
+    display: none !important;
+}
+
+/* Fix any potential layout issues with nav-wrapper */
+.main-header .nav-wrapper {
+    position: relative;
+}
+
+/* Ensure mobile menu toggle is properly positioned */
+.mobile-menu-toggle {
+    position: relative;
+    z-index: 1001;
+}
+
+/* Hide any stray elements that might appear in header */
+.main-header .nav-wrapper > span:empty,
+.main-header .nav-wrapper > div:empty,
+.main-nav .container > span:empty,
+.main-nav .container > div:empty:not(.nav-wrapper) {
+    display: none !important;
+}
+
+/* Fix specific nav-wrapper layout issues */
+.main-header .nav-wrapper {
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+
+/* Ensure no additional spacing or pseudo-elements in top-right */
+.main-header .nav-wrapper::after,
+.main-header .nav-menu::after,
+.main-nav::after {
+    display: none !important;
+}
+
+/* Remove any potential white background on empty elements */
+.main-header * {
+    background-color: transparent;
+}
+
+/* Override any element that might be showing as white box */
+.main-header .nav-wrapper > *:not(.logo):not(.nav-menu):not(.mobile-menu-toggle) {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    display: none !important;
+}

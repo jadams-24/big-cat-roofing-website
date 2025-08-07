@@ -38,30 +38,30 @@ class EstimateModal {
                         
                         <div class="estimate-modal-message" id="modal-message"></div>
                         
-                        <form class="estimate-modal-form" id="popup-estimate-form">
+                        <form class="estimate-modal-form" id="popup-estimate-form" novalidate action="https://formspree.io/f/xvgqvobo" method="POST">
                             <div class="form-group">
                                 <label for="popup-name">Full Name *</label>
-                                <input type="text" name="name" id="popup-name" placeholder="Enter your full name" required>
+                                <input type="text" name="name" id="popup-name" placeholder="Enter your full name">
                             </div>
                             
                             <div class="form-group">
                                 <label for="popup-phone">Phone Number *</label>
-                                <input type="tel" name="phone" id="popup-phone" placeholder="(248) 709-3746" required>
+                                <input type="tel" name="phone" id="popup-phone" placeholder="(248) 709-3746">
                             </div>
                             
                             <div class="form-group">
                                 <label for="popup-email">Email Address *</label>
-                                <input type="email" name="email" id="popup-email" placeholder="your.email@example.com" required>
+                                <input type="email" name="email" id="popup-email" placeholder="your.email@example.com">
                             </div>
                             
                             <div class="form-group">
                                 <label for="popup-address">Property Address *</label>
-                                <input type="text" name="address" id="popup-address" placeholder="Property address for estimate" required>
+                                <input type="text" name="address" id="popup-address" placeholder="Property address for estimate">
                             </div>
                             
                             <div class="form-group">
                                 <label for="popup-service">Service Type *</label>
-                                <select name="service" id="popup-service" required>
+                                <select name="service" id="popup-service">
                                     <option value="">Select Service Type</option>
                                     <option value="residential-roofing">Residential Roofing</option>
                                     <option value="commercial-roofing">Commercial Roofing</option>
@@ -141,9 +141,8 @@ class EstimateModal {
             }
         });
         
-        // Form submission
-        const form = this.modal.querySelector('#popup-estimate-form');
-        form.addEventListener('submit', (e) => this.handleFormSubmit(e));
+        // Form submission - DISABLED per client request
+        // All form validation and preventDefault removed to allow natural Formspree submission
     }
 
     bindEstimateButtons() {
@@ -294,16 +293,8 @@ class EstimateModal {
     }
 
     async handleFormSubmit(e) {
-        e.preventDefault();
-        
-        const submitBtn = this.modal.querySelector('#popup-submit-btn');
-        const messageDiv = this.modal.querySelector('#modal-message');
-        const form = e.target;
-        
-        // Validate form
-        if (!this.validateForm(form)) {
-            return;
-        }
+        // VALIDATION DISABLED - Forms now submit directly to Formspree without client-side validation
+        // No preventDefault() - allow natural form submission
         
         // Show loading state
         submitBtn.classList.add('loading');

@@ -200,87 +200,9 @@ document.addEventListener('DOMContentLoaded', function() {
         animateElements.forEach(el => animateObserver.observe(el));
     }
 
-    // Form Validation
-    const forms = document.querySelectorAll('form');
-    forms.forEach(form => {
-        form.addEventListener('submit', function(e) {
-            const requiredFields = form.querySelectorAll('[required]');
-            const allFields = form.querySelectorAll('input, textarea, select');
-            let isValid = true;
-            
-            // Validate all fields (required and optional)
-            allFields.forEach(field => {
-                const fieldValue = field.value.trim();
-                
-                // Full Name field - make it optional but validate format if provided
-                if (field.name === 'full_name' || field.id === 'full_name') {
-                    if (fieldValue.length > 0) {
-                        // Basic name validation - allow letters, spaces, apostrophes, hyphens
-                        const nameRegex = /^[a-zA-Z\s'\-\.]+$/;
-                        if (nameRegex.test(fieldValue)) {
-                            field.classList.remove('error');
-                        } else {
-                            isValid = false;
-                            field.classList.add('error');
-                        }
-                    } else {
-                        // Full name is optional - no error if empty
-                        field.classList.remove('error');
-                    }
-                    return;
-                }
-            });
-            
-            requiredFields.forEach(field => {
-                const fieldValue = field.value.trim();
-                
-                // Skip full_name since we handle it above
-                if (field.name === 'full_name' || field.id === 'full_name') {
-                    return;
-                }
-                
-                // General required field validation
-                if (!fieldValue) {
-                    isValid = false;
-                    field.classList.add('error');
-                } else {
-                    field.classList.remove('error');
-                }
-                
-                // Email validation
-                if (field.type === 'email' && fieldValue) {
-                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                    if (!emailRegex.test(fieldValue)) {
-                        isValid = false;
-                        field.classList.add('error');
-                    }
-                }
-                
-                // Phone validation
-                if (field.type === 'tel' && fieldValue) {
-                    const phoneRegex = /^[\d\s\-\(\)]+$/;
-                    if (!phoneRegex.test(fieldValue) || fieldValue.replace(/\D/g, '').length < 10) {
-                        isValid = false;
-                        field.classList.add('error');
-                    }
-                }
-            });
-            
-            if (!isValid) {
-                e.preventDefault();
-                return false;
-            }
-            // If validation passes, allow natural form submission to proceed
-        });
-        
-        // Remove error class on input
-        const inputs = form.querySelectorAll('input, textarea, select');
-        inputs.forEach(input => {
-            input.addEventListener('input', function() {
-                this.classList.remove('error');
-            });
-        });
-    });
+    // Form Validation - DISABLED per client request
+    // ALL form validation has been removed to allow unrestricted form submission
+    // Forms will submit naturally to Formspree without any client-side validation barriers
 
     // Service Worker Registration (for PWA support)
     if ('serviceWorker' in navigator) {

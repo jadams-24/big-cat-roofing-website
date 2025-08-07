@@ -33,6 +33,7 @@
     <link rel="stylesheet" href="css/popup-modal.min.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="css/clickable-rating.min.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="css/storm-repair-centering.min.css">
+    <link rel="stylesheet" href="css/storm-repair-fix.min.css">
     
     <!-- Preload critical resources -->
     <link rel="preload" href="images/logos/logo-black.svg" as="image" type="image/svg+xml">
@@ -558,7 +559,7 @@
                 </div>
                 
                 <div class="contact-form-wrapper">
-                    <form action="https://formspree.io/f/xvgqvobo" method="POST" class="contact-form estimate-form">
+                    <form action="https://formspree.io/f/xvgqvobo" method="POST" class="contact-form estimate-form" novalidate>
                         <h3>Request Emergency Storm Repair</h3>
                         
                         <!-- Hidden fields for better email organization -->
@@ -570,7 +571,7 @@
                                    id="full_name" 
                                    name="full_name" 
                                    placeholder="Full Name *" 
-                                   required>
+>
                         </div>
                         
                         <div class="form-group">
@@ -578,7 +579,7 @@
                                    id="phone" 
                                    name="phone" 
                                    placeholder="Phone Number *" 
-                                   required>
+>
                         </div>
                         
                         <div class="form-group">
@@ -586,7 +587,7 @@
                                    id="email" 
                                    name="email" 
                                    placeholder="Email Address *" 
-                                   required>
+>
                         </div>
                         
                         <div class="form-group">
@@ -594,11 +595,11 @@
                                    id="property_address" 
                                    name="property_address" 
                                    placeholder="Property Address *" 
-                                   required>
+>
                         </div>
                         
                         <div class="form-group">
-                            <select id="service_type" name="service_type" required>
+                            <select id="service_type" name="service_type">
                                 <option value="">Type of Storm Damage *</option>
                                 <option value="Hail Damage">Hail Damage</option>
                                 <option value="Wind Damage">Wind Damage</option>
@@ -610,7 +611,7 @@
                         </div>
                         
                         <div class="form-group">
-                            <select id="urgency" name="urgency" required>
+                            <select id="urgency" name="urgency">
                                 <option value="">Urgency Level *</option>
                                 <option value="🚨 EMERGENCY - Immediate Response Needed">🚨 EMERGENCY - Immediate Response Needed</option>
                                 <option value="⚡ URGENT - Priority Response">⚡ URGENT - Priority Response</option>
@@ -623,7 +624,7 @@
                                       name="project_details" 
                                       placeholder="Describe the storm damage (when it occurred, extent of damage, any leaks, etc.)" 
                                       rows="4" 
-                                      required></textarea>
+   ></textarea>
                         </div>
                         
                         <div class="form-group">
