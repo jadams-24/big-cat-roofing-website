@@ -205,10 +205,42 @@ document.addEventListener('DOMContentLoaded', function() {
     forms.forEach(form => {
         form.addEventListener('submit', function(e) {
             const requiredFields = form.querySelectorAll('[required]');
+            const allFields = form.querySelectorAll('input, textarea, select');
             let isValid = true;
             
+            // Validate all fields (required and optional)
+            allFields.forEach(field => {
+                const fieldValue = field.value.trim();
+                
+                // Full Name field - make it optional but validate format if provided
+                if (field.name === 'full_name' || field.id === 'full_name') {
+                    if (fieldValue.length > 0) {
+                        // Basic name validation - allow letters, spaces, apostrophes, hyphens
+                        const nameRegex = /^[a-zA-Z\s'\-\.]+$/;
+                        if (nameRegex.test(fieldValue)) {
+                            field.classList.remove('error');
+                        } else {
+                            isValid = false;
+                            field.classList.add('error');
+                        }
+                    } else {
+                        // Full name is optional - no error if empty
+                        field.classList.remove('error');
+                    }
+                    return;
+                }
+            });
+            
             requiredFields.forEach(field => {
-                if (!field.value.trim()) {
+                const fieldValue = field.value.trim();
+                
+                // Skip full_name since we handle it above
+                if (field.name === 'full_name' || field.id === 'full_name') {
+                    return;
+                }
+                
+                // General required field validation
+                if (!fieldValue) {
                     isValid = false;
                     field.classList.add('error');
                 } else {
@@ -216,18 +248,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
                 
                 // Email validation
-                if (field.type === 'email' && field.value) {
+                if (field.type === 'email' && fieldValue) {
                     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                    if (!emailRegex.test(field.value)) {
+                    if (!emailRegex.test(fieldValue)) {
                         isValid = false;
                         field.classList.add('error');
                     }
                 }
                 
                 // Phone validation
-                if (field.type === 'tel' && field.value) {
+                if (field.type === 'tel' && fieldValue) {
                     const phoneRegex = /^[\d\s\-\(\)]+$/;
-                    if (!phoneRegex.test(field.value) || field.value.replace(/\D/g, '').length < 10) {
+                    if (!phoneRegex.test(fieldValue) || fieldValue.replace(/\D/g, '').length < 10) {
                         isValid = false;
                         field.classList.add('error');
                     }

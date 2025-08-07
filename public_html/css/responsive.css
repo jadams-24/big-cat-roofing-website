@@ -31,9 +31,10 @@
         height: 550px;
     }
     
-    /* Benefits Grid - Tablet: 2 columns */
+    /* Benefits Grid - Tablet: 2 columns, 4 rows */
     .benefits-grid {
         grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
         gap: var(--spacing-lg);
     }
 
@@ -258,9 +259,10 @@
         gap: var(--spacing-md);
     }
     
-    /* Benefits Grid */
+    /* Benefits Grid - Mobile: single column, 8 rows */
     .benefits-grid {
         grid-template-columns: 1fr;
+        grid-template-rows: repeat(8, 1fr);
         gap: var(--spacing-md);
     }
     
