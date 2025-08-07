@@ -512,3 +512,382 @@ body.modal-open {
         display: none !important;
     }
 }
+
+/* ===== THANK YOU MODAL STYLES ===== */
+
+/* Thank You Modal Overlay */
+.thank-you-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 10001; /* Higher than estimate modal */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+
+.thank-you-modal.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Modal Overlay Background */
+.thank-you-modal .modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+/* Thank You Modal Container */
+.thank-you-modal .modal-content {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.4);
+    width: 90%;
+    max-width: 550px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    transform: scale(0.8) translateY(-30px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    margin: 20px;
+    animation: modalSlideUp 0.4s ease-out;
+}
+
+.thank-you-modal.show .modal-content {
+    transform: scale(1) translateY(0);
+}
+
+/* Close Button */
+.thank-you-modal .modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #999999;
+    font-size: 28px;
+    font-weight: 300;
+    cursor: pointer;
+    padding: 8px;
+    line-height: 1;
+    transition: all 0.2s ease;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.thank-you-modal .modal-close:hover {
+    background: rgba(0, 0, 0, 0.05);
+    color: #666666;
+    transform: rotate(90deg);
+}
+
+.thank-you-modal .modal-close:focus {
+    outline: 2px solid #C8AF6A;
+    outline-offset: 2px;
+}
+
+/* Thank You Content */
+.thank-you-modal .thank-you-content {
+    padding: 50px 40px 40px 40px;
+    text-align: center;
+}
+
+/* Success Icon */
+.thank-you-modal .success-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 25px auto;
+    background: linear-gradient(135deg, #C8AF6A 0%, #D4BB7A 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: successPulse 2s ease-in-out infinite;
+    box-shadow: 0 4px 20px rgba(200, 175, 106, 0.3);
+}
+
+.thank-you-modal .success-icon svg {
+    color: #ffffff;
+    width: 40px;
+    height: 40px;
+    stroke-width: 3;
+}
+
+/* Typography */
+.thank-you-modal h2 {
+    color: #1a1a1a;
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+    letter-spacing: -0.5px;
+}
+
+.thank-you-modal .primary-message {
+    color: #333333;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0 0 15px 0;
+    font-weight: 400;
+}
+
+.thank-you-modal .response-time {
+    color: #C8AF6A;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 30px 0;
+    padding: 15px 20px;
+    background: rgba(200, 175, 106, 0.1);
+    border-radius: 8px;
+    border-left: 4px solid #C8AF6A;
+}
+
+/* Contact Info Section */
+.thank-you-modal .contact-info {
+    margin: 25px 0;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border: 1px solid #e9ecef;
+}
+
+.thank-you-modal .immediate-help {
+    color: #666666;
+    font-size: 14px;
+    margin: 0 0 8px 0;
+    font-weight: 500;
+}
+
+.thank-you-modal .phone-number {
+    margin: 0;
+}
+
+.thank-you-modal .phone-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #C8AF6A;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    transition: all 0.2s ease;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+.thank-you-modal .phone-link:hover {
+    background: rgba(200, 175, 106, 0.1);
+    color: #B8A055;
+    transform: translateY(-1px);
+}
+
+.thank-you-modal .phone-link svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+/* Modal Actions */
+.thank-you-modal .modal-actions {
+    margin: 30px 0 20px 0;
+}
+
+.thank-you-modal .btn {
+    background: linear-gradient(135deg, #C8AF6A 0%, #B8A055 100%);
+    color: #ffffff;
+    border: none;
+    padding: 15px 40px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(200, 175, 106, 0.3);
+    min-width: 140px;
+}
+
+.thank-you-modal .btn:hover {
+    background: linear-gradient(135deg, #B8A055 0%, #A8955A 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(200, 175, 106, 0.4);
+}
+
+.thank-you-modal .btn:active {
+    transform: translateY(0);
+}
+
+.thank-you-modal .btn:focus {
+    outline: 2px solid #C8AF6A;
+    outline-offset: 2px;
+}
+
+/* Trust Indicators */
+.thank-you-modal .trust-indicators {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #e9ecef;
+}
+
+.thank-you-modal .trust-text {
+    color: #666666;
+    font-size: 13px;
+    margin: 0;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+/* Animations */
+@keyframes modalSlideUp {
+    0% {
+        transform: scale(0.8) translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes successPulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 4px 20px rgba(200, 175, 106, 0.3);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 6px 25px rgba(200, 175, 106, 0.4);
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .thank-you-modal .modal-content {
+        width: 95%;
+        margin: 10px;
+    }
+    
+    .thank-you-modal .thank-you-content {
+        padding: 40px 30px 30px 30px;
+    }
+    
+    .thank-you-modal h2 {
+        font-size: 28px;
+    }
+    
+    .thank-you-modal .primary-message {
+        font-size: 16px;
+    }
+    
+    .thank-you-modal .response-time {
+        font-size: 15px;
+        padding: 12px 16px;
+    }
+    
+    .thank-you-modal .phone-link {
+        font-size: 16px;
+    }
+    
+    .thank-you-modal .success-icon {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .thank-you-modal .success-icon svg {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .thank-you-modal .modal-content {
+        width: 98%;
+        margin: 5px;
+        border-radius: 12px;
+    }
+    
+    .thank-you-modal .thank-you-content {
+        padding: 35px 25px 25px 25px;
+    }
+    
+    .thank-you-modal h2 {
+        font-size: 24px;
+    }
+    
+    .thank-you-modal .primary-message {
+        font-size: 15px;
+    }
+    
+    .thank-you-modal .response-time {
+        font-size: 14px;
+    }
+    
+    .thank-you-modal .btn {
+        padding: 12px 30px;
+        font-size: 14px;
+    }
+}
+
+/* Prevent body scroll when modal is open */
+body.thank-you-modal-open {
+    overflow: hidden;
+}
+
+/* High contrast support */
+@media (prefers-contrast: high) {
+    .thank-you-modal .modal-content {
+        border: 3px solid #000000;
+    }
+    
+    .thank-you-modal .success-icon {
+        background: #000000;
+    }
+    
+    .thank-you-modal .btn {
+        background: #000000;
+        color: #ffffff;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .thank-you-modal,
+    .thank-you-modal .modal-content,
+    .thank-you-modal .modal-close,
+    .thank-you-modal .btn,
+    .thank-you-modal .phone-link {
+        transition: none;
+    }
+    
+    .thank-you-modal .success-icon {
+        animation: none;
+    }
+    
+    .thank-you-modal .modal-content {
+        animation: none;
+    }
+}
+
+/* Print styles - hide modal when printing */
+@media print {
+    .thank-you-modal {
+        display: none !important;
+    }
+}

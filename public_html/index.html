@@ -706,44 +706,74 @@
                 </div>
                 
                 <div class="contact-form-wrapper">
-                    <form class="contact-form" id="contact-form" method="POST" action="#" novalidate>
+                    <form action="https://formspree.io/f/xvgqvobo" method="POST" class="contact-form estimate-form">
                         <h3>Request Free Estimate</h3>
                         
+                        <!-- Hidden fields for better email organization -->
+                        <input type="hidden" name="_subject" value="New Roofing Estimate Request - Big Cat Roofing">
+                        <input type="hidden" name="_next" value="https://bigcatroofs.com/thank-you.html">
+                        
                         <div class="form-group">
-                            <input type="text" name="name" placeholder="Your Name">
+                            <input type="text" 
+                                   id="full_name" 
+                                   name="full_name" 
+                                   placeholder="Full Name *" 
+                                   required>
                         </div>
                         
                         <div class="form-group">
-                            <input type="tel" name="phone" placeholder="Phone Number">
+                            <input type="tel" 
+                                   id="phone" 
+                                   name="phone" 
+                                   placeholder="Phone Number *" 
+                                   required>
                         </div>
                         
                         <div class="form-group">
-                            <input type="email" name="email" placeholder="Email Address">
+                            <input type="email" 
+                                   id="email" 
+                                   name="email" 
+                                   placeholder="Email Address *" 
+                                   required>
                         </div>
                         
                         <div class="form-group">
-                            <select name="service">
-                                <option value="">Select Service Type</option>
-                                <option value="residential-roofing">Residential Roofing</option>
-                                <option value="commercial-roofing">Commercial Roofing</option>
-                                <option value="roof-repair">Roof Repair</option>
-                                <option value="roof-replacement">Roof Replacement</option>
-                                <option value="roof-inspection">Roof Inspection</option>
-                                <option value="gutter-installation">Gutter Installation</option>
-                                <option value="gutter-repair">Gutter Repair</option>
-                                <option value="gutter-cleaning">Gutter Cleaning</option>
-                                <option value="gutter-covers">Gutter Covers</option>
-                                <option value="emergency-roof-repair">Emergency Roof Repair</option>
-                                <option value="storm-damage-repair">Storm Damage Repair</option>
-                                <option value="silicone-roof-coatings">Silicone Roof Coatings</option>
+                            <input type="text" 
+                                   id="property_address" 
+                                   name="property_address" 
+                                   placeholder="Property Address *" 
+                                   required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <select id="service_type" name="service_type" required>
+                                <option value="">Select Service Type *</option>
+                                <option value="Roof Repair">Roof Repair</option>
+                                <option value="Roof Replacement">Roof Replacement</option>
+                                <option value="New Construction">New Construction</option>
+                                <option value="Residential Roofing">Residential Roofing</option>
+                                <option value="Commercial Roofing">Commercial Roofing</option>
+                                <option value="Gutter Services">Gutter Services</option>
+                                <option value="Siding Services">Siding Services</option>
+                                <option value="Storm Damage Repair">Storm Damage Repair</option>
+                                <option value="Emergency Roof Repair">Emergency Roof Repair</option>
+                                <option value="Free Inspection">Free Inspection</option>
+                                <option value="Other">Other</option>
                             </select>
                         </div>
                         
                         <div class="form-group">
-                            <textarea name="message" placeholder="Tell us about your roofing needs" rows="4"></textarea>
+                            <textarea id="project_details" 
+                                      name="project_details" 
+                                      placeholder="Tell us about your roofing project (optional)"
+                                      rows="4"></textarea>
                         </div>
                         
-                        <button type="submit" class="btn btn-primary btn-block">Get Free Estimate</button>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-lg btn-block">
+                                REQUEST FREE ESTIMATE
+                            </button>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -837,23 +867,10 @@
     <!-- Core Scripts - Essential for functionality -->
     <script src="js/main.min.js" defer></script>
     
-    <!-- Third-party Scripts - Load asynchronously -->
-    <script async src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" onload="loadEmailScripts()"></script>
-    
     <!-- Deferred Scripts - Load after user interaction or timeout -->
+    <script src="js/popup-modal.min.js" defer></script>
+    
     <script>
-        function loadEmailScripts() {
-            const emailScript = document.createElement('script');
-            emailScript.src = 'js/email-notifications.min.js';
-            emailScript.defer = true;
-            emailScript.onload = function() {
-                const popupScript = document.createElement('script');
-                popupScript.src = 'js/popup-modal.min.js';
-                popupScript.defer = true;
-                document.head.appendChild(popupScript);
-            };
-            document.head.appendChild(emailScript);
-        }
         
         function loadMapScripts() {
             const leafletScript = document.createElement('script');
@@ -873,5 +890,44 @@
         });
         setTimeout(loadMapScripts, 4000);
     </script>
+
+    <!-- Thank You Modal -->
+    <div id="thankYouModal" class="thank-you-modal" style="display: none;" aria-hidden="true" role="dialog" aria-labelledby="thankYouTitle" aria-describedby="thankYouMessage">
+        <div class="modal-overlay" onclick="closeThankYouModal()"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeThankYouModal()" aria-label="Close modal">&times;</button>
+            <div class="thank-you-content">
+                <div class="success-icon">
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 11l3 3L22 4"/>
+                        <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
+                    </svg>
+                </div>
+                <h2 id="thankYouTitle">Thank You!</h2>
+                <p id="thankYouMessage" class="primary-message">Your roofing estimate request has been successfully submitted.</p>
+                <p class="response-time"><strong>We will contact you within 24 hours</strong> to discuss your project and schedule your free estimate.</p>
+                
+                <div class="contact-info">
+                    <p class="immediate-help">Need immediate assistance?</p>
+                    <p class="phone-number">
+                        <a href="tel:248-709-3746" class="phone-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                            </svg>
+                            Call Now: (248) 709-3746
+                        </a>
+                    </p>
+                </div>
+                
+                <div class="modal-actions">
+                    <button class="btn btn-primary" onclick="closeThankYouModal()">Continue</button>
+                </div>
+                
+                <div class="trust-indicators">
+                    <p class="trust-text">✓ Licensed & Insured • ✓ GAF Certified • ✓ 20+ Years Experience</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

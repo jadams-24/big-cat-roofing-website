@@ -70,8 +70,8 @@ function setupFormSubmission(form, formType) {
             // Send confirmation email to customer
             await sendCustomerConfirmation(formData);
             
-            // Show success message
-            showSuccessMessage(form);
+            // Show thank you modal
+            showThankYouModal();
             
             // Reset form
             form.reset();
@@ -386,3 +386,68 @@ window.BigCatEmailNotifications = {
 
 // Export EmailJS configuration globally
 window.EMAILJS_CONFIG = EMAILJS_CONFIG;
+
+// ===== THANK YOU MODAL FUNCTIONS =====
+
+// Show thank you modal after successful form submission
+function showThankYouModal() {
+    const modal = document.getElementById('thankYouModal');
+    if (modal) {
+        // Prevent body scroll
+        document.body.classList.add('thank-you-modal-open');
+        
+        // Show modal with animation
+        modal.style.display = 'flex';
+        
+        // Trigger animation after display is set
+        setTimeout(() => {
+            modal.classList.add('show');
+        }, 10);
+        
+        // Set focus to close button for accessibility
+        const closeButton = modal.querySelector('.modal-close');
+        if (closeButton) {
+            setTimeout(() => {
+                closeButton.focus();
+            }, 300);
+        }
+        
+        // Auto-close after 15 seconds
+        setTimeout(() => {
+            closeThankYouModal();
+        }, 15000);
+        
+        // Add escape key listener
+        document.addEventListener('keydown', handleThankYouModalEscape);
+    }
+}
+
+// Close thank you modal
+function closeThankYouModal() {
+    const modal = document.getElementById('thankYouModal');
+    if (modal) {
+        // Remove animation class
+        modal.classList.remove('show');
+        
+        // Hide modal after animation completes
+        setTimeout(() => {
+            modal.style.display = 'none';
+            // Allow body scroll
+            document.body.classList.remove('thank-you-modal-open');
+        }, 300);
+        
+        // Remove escape key listener
+        document.removeEventListener('keydown', handleThankYouModalEscape);
+    }
+}
+
+// Handle escape key press
+function handleThankYouModalEscape(event) {
+    if (event.key === 'Escape') {
+        closeThankYouModal();
+    }
+}
+
+// Make functions globally available
+window.showThankYouModal = showThankYouModal;
+window.closeThankYouModal = closeThankYouModal;

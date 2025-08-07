@@ -558,51 +558,79 @@
                 </div>
                 
                 <div class="contact-form-wrapper">
-                    <form class="contact-form" id="storm-damage-contact-form">
+                    <form action="https://formspree.io/f/xvgqvobo" method="POST" class="contact-form estimate-form">
                         <h3>Request Emergency Storm Repair</h3>
                         
+                        <!-- Hidden fields for better email organization -->
+                        <input type="hidden" name="_subject" value="EMERGENCY Storm Damage Request - Big Cat Roofing">
+                        <input type="hidden" name="_next" value="https://bigcatroofs.com/thank-you.html">
+                        
                         <div class="form-group">
-                            <input type="text" name="name" placeholder="Your Name" required>
+                            <input type="text" 
+                                   id="full_name" 
+                                   name="full_name" 
+                                   placeholder="Full Name *" 
+                                   required>
                         </div>
                         
                         <div class="form-group">
-                            <input type="tel" name="phone" placeholder="Phone Number" required>
+                            <input type="tel" 
+                                   id="phone" 
+                                   name="phone" 
+                                   placeholder="Phone Number *" 
+                                   required>
                         </div>
                         
                         <div class="form-group">
-                            <input type="email" name="email" placeholder="Email Address" required>
+                            <input type="email" 
+                                   id="email" 
+                                   name="email" 
+                                   placeholder="Email Address *" 
+                                   required>
                         </div>
                         
                         <div class="form-group">
-                            <input type="text" name="address" placeholder="Property Address" required>
+                            <input type="text" 
+                                   id="property_address" 
+                                   name="property_address" 
+                                   placeholder="Property Address *" 
+                                   required>
                         </div>
                         
                         <div class="form-group">
-                            <select name="service" required>
-                                <option value="">Type of Storm Damage</option>
-                                <option value="hail-damage">Hail Damage</option>
-                                <option value="wind-damage">Wind Damage</option>
-                                <option value="fallen-tree">Fallen Tree Damage</option>
-                                <option value="ice-dam">Ice Dam Damage</option>
-                                <option value="general-storm">General Storm Damage</option>
-                                <option value="emergency-tarping">Emergency Tarping Needed</option>
+                            <select id="service_type" name="service_type" required>
+                                <option value="">Type of Storm Damage *</option>
+                                <option value="Hail Damage">Hail Damage</option>
+                                <option value="Wind Damage">Wind Damage</option>
+                                <option value="Fallen Tree Damage">Fallen Tree Damage</option>
+                                <option value="Ice Dam Damage">Ice Dam Damage</option>
+                                <option value="General Storm Damage">General Storm Damage</option>
+                                <option value="Emergency Tarping Needed">Emergency Tarping Needed</option>
                             </select>
                         </div>
                         
                         <div class="form-group">
-                            <select name="urgency" required>
-                                <option value="">Urgency Level</option>
-                                <option value="emergency">🚨 EMERGENCY - Immediate Response Needed</option>
-                                <option value="urgent">⚡ URGENT - Priority Response</option>
-                                <option value="standard">📋 Standard Assessment Request</option>
+                            <select id="urgency" name="urgency" required>
+                                <option value="">Urgency Level *</option>
+                                <option value="🚨 EMERGENCY - Immediate Response Needed">🚨 EMERGENCY - Immediate Response Needed</option>
+                                <option value="⚡ URGENT - Priority Response">⚡ URGENT - Priority Response</option>
+                                <option value="📋 Standard Assessment Request">📋 Standard Assessment Request</option>
                             </select>
                         </div>
                         
                         <div class="form-group">
-                            <textarea name="message" placeholder="Describe the storm damage (when it occurred, extent of damage, any leaks, etc.)" rows="4" required></textarea>
+                            <textarea id="project_details" 
+                                      name="project_details" 
+                                      placeholder="Describe the storm damage (when it occurred, extent of damage, any leaks, etc.)" 
+                                      rows="4" 
+                                      required></textarea>
                         </div>
                         
-                        <button type="submit" class="btn btn-primary btn-block" style="background: #dc3545; font-size: 1.1rem; padding: 15px;">Request Emergency Response</button>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-lg btn-block" style="background: #dc3545; font-size: 1.1rem; padding: 15px;">
+                                REQUEST EMERGENCY RESPONSE
+                            </button>
+                        </div>
                         
                         <p style="text-align: center; margin-top: 15px; font-size: 0.9rem; color: #666;">
                             For immediate emergencies, call <strong><a href="tel:248-709-3746">248-709-3746</a></strong>
@@ -696,11 +724,7 @@
         </div>
     </footer>
 
-    <!-- EmailJS Library -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    
     <!-- Scripts -->
-    <script src="js/email-notifications.min.js" defer></script>
     <script src="js/popup-modal.min.js" defer></script>
     <script src="js/main.min.js" defer></script>
 </body>
