@@ -2,18 +2,17 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8YWQ9MES9F"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-8YWQ9MES9F');
-    </script>
     
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch" href="//unpkg.com">
     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roofing Services in Royal Oak, MI | Big Cat Roofing</title>
     <meta name="description" content="Professional roofing services in Royal Oak, MI. Big Cat Roofing serves Royal Oak with expert roof repair, replacement & installation. Licensed contractors. Free estimates. Call 248-709-3746.">
@@ -21,32 +20,32 @@
     
     <link rel="canonical" href="https://bigcatroofs.com/royal-oak-roofing.html" />
     
-    <!-- Favicon -->
+    
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
     <link rel="apple-touch-icon" sizes="192x192" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="512x512" href="/web-app-manifest-512x512.png">
     
-    <!-- Include existing CSS files -->
+    
     <link rel="stylesheet" href="css/combined.min.css" media="print" onload="this.media='all'; this.onload=null;">
     <noscript><link rel="stylesheet" href="css/combined.min.css"></noscript>
     <link rel="stylesheet" href="css/styles.min.css">
-    <link rel="stylesheet" href="css/responsive.min.css">
-    <link rel="stylesheet" href="css/popup-modal.min.css">
-    <link rel="stylesheet" href="css/city-page.min.css">
+    <link rel="stylesheet" href="css/responsive.min.css" media="print" onload="this.media=\'all\'">
     
-    <!-- Performance Optimization -->
+    <link rel="stylesheet" href="css/city-page.min.css" media="print" onload="this.media=\'all\'">
+    
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2" as="font" type="font/woff2" crossorigin>
 
-    <!-- Fallback for browsers without JavaScript -->
+    
     <noscript>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
     </noscript>
     
-    <!-- Local Business Schema -->
+    
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -72,9 +71,38 @@
         "areaServed": ["Royal Oak", "Madison Heights", "Troy", "Birmingham", "Ferndale"]
     }
     </script>
+<script>
+    // Optimized Google Analytics - Load after user interaction or 3 seconds
+    (function() {
+        let gaLoaded = false;
+        
+        function loadGA() {
+            if (gaLoaded) return;
+            gaLoaded = true;
+            
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-8YWQ9MES9F');
+            
+            const script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-8YWQ9MES9F';
+            document.head.appendChild(script);
+        }
+        
+        // Load on user interaction
+        ['mousedown', 'mousemove', 'keypress', 'scroll', 'touchstart', 'click'].forEach(function(event) {
+            window.addEventListener(event, loadGA, {once: true, passive: true});
+        });
+        
+        // Fallback: Load after 3 seconds
+        setTimeout(loadGA, 3000);
+    })();
+    </script>
 </head>
 <body>
-    <!-- Header Navigation -->
+    
     <header class="main-header">
         <div class="header-top">
             <div class="container">
@@ -125,7 +153,7 @@
         </nav>
     </header>
     
-    <!-- Hero Section -->
+    
     <section class="hero-section city-hero">
         <div class="container">
             <div class="hero-content">
@@ -144,7 +172,7 @@
         </div>
     </section>
     
-    <!-- Services Section -->
+    
     <section class="services-section">
         <div class="container">
             <h2 class="section-title">Comprehensive Roofing Services for Royal Oak Residents</h2>
@@ -211,7 +239,7 @@
         </div>
     </section>
     
-    <!-- Local Expertise Section -->
+    
     <section class="local-expertise">
         <div class="container">
             <h2>Why Choose Big Cat Roofing in Royal Oak?</h2>
@@ -235,7 +263,7 @@
         </div>
     </section>
     
-    <!-- Testimonials Section -->
+    
     <section class="testimonials-section">
         <div class="container">
             <h2>What Royal Oak Homeowners Say</h2>
@@ -274,13 +302,13 @@
         </div>
     </section>
     
-    <!-- Service Area Map Section -->
+    
     <section class="service-area-section">
         <div class="container">
             <h2>Serving Royal Oak and Surrounding Areas</h2>
             
             <div class="map-container">
-                <!-- Embedded Google Map focused on Royal Oak -->
+                
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23576.234429!2d-83.1546515!3d42.4895275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8824e9c8f5f8c3c5%3A0x5e7f0a3b6b7d8a0!2sRoyal%20Oak%2C%20MI!5e0!3m2!1sen!2sus!4v1623456789012!5m2!1sen!2sus"
                         width="100%" height="400" style="border:0;" allowfullscreen="" 
                         loading="lazy" referrerpolicy="no-referrer-when-downgrade">
@@ -303,7 +331,7 @@
         </div>
     </section>
     
-    <!-- FAQ Section -->
+    
     <section class="faq-section">
         <div class="container">
             <h2>Frequently Asked Questions - Royal Oak Roofing</h2>
@@ -337,7 +365,7 @@
         </div>
     </section>
     
-    <!-- Contact/CTA Section -->
+    
     <section class="contact-cta">
         <div class="container">
             <div class="cta-content">
@@ -360,7 +388,7 @@
         </div>
     </section>
     
-    <!-- Footer -->
+    
     <footer class="main-footer">
         <div class="container">
             <div class="footer-content">
@@ -434,8 +462,9 @@
         </div>
     </footer>
     
-    <!-- Scripts -->
+    
     <script src="js/main.min.js"></script>
-    <script src="js/popup-modal.min.js"></script>
+    
+    <script src="js/performance-optimized-loader.min.js" defer></script>
 </body>
 </html>

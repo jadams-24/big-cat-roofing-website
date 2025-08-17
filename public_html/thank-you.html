@@ -2,30 +2,30 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+    
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch" href="//unpkg.com">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8YWQ9MES9F"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-8YWQ9MES9F');
-    </script>
     
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thank You - Big Cat Roofing</title>
     <meta name="description" content="Thank you for contacting Big Cat Roofing. We'll contact you within 24 hours about your roofing project.">
     
-    <!-- Favicon -->
+    
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
     <link rel="apple-touch-icon" sizes="192x192" href="/apple-touch-icon.png">
     
-    <!-- CSS Files -->
+    
     <link rel="stylesheet" href="css/combined.min.css">
     <link rel="stylesheet" href="css/styles.min.css">
-    <link rel="stylesheet" href="css/responsive.min.css">
+    <link rel="stylesheet" href="css/responsive.min.css" media="print" onload="this.media=\'all\'">
     
     <style>
         .thank-you-page {
@@ -144,6 +144,35 @@
             }
         }
     </style>
+<script>
+    // Optimized Google Analytics - Load after user interaction or 3 seconds
+    (function() {
+        let gaLoaded = false;
+        
+        function loadGA() {
+            if (gaLoaded) return;
+            gaLoaded = true;
+            
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-8YWQ9MES9F');
+            
+            const script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-8YWQ9MES9F';
+            document.head.appendChild(script);
+        }
+        
+        // Load on user interaction
+        ['mousedown', 'mousemove', 'keypress', 'scroll', 'touchstart', 'click'].forEach(function(event) {
+            window.addEventListener(event, loadGA, {once: true, passive: true});
+        });
+        
+        // Fallback: Load after 3 seconds
+        setTimeout(loadGA, 3000);
+    })();
+    </script>
 </head>
 <body>
     <div class="thank-you-page">
@@ -172,5 +201,6 @@
             </div>
         </div>
     </div>
+    <script src="js/performance-optimized-loader.min.js" defer></script>
 </body>
 </html>

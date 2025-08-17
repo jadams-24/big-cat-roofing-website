@@ -2,34 +2,33 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8YWQ9MES9F"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-8YWQ9MES9F');
-    </script>
     
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch" href="//unpkg.com">
     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page Not Found - 404 | Big Cat Roofing | Warren MI</title>
     <meta name="description" content="Oops! The page you're looking for doesn't exist. Find what you need at Big Cat Roofing - Warren MI's trusted roofing contractors since 2001.">
     <meta name="robots" content="noindex, follow">
     
-    <!-- Performance Optimization -->
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-    <!-- Favicon -->
+    
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
     <link rel="apple-touch-icon" sizes="192x192" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="512x512" href="/web-app-manifest-512x512.png">
     
-    <!-- Critical CSS - Inline for performance -->
+    
     <style>
         body { font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; line-height: 1.6; }
         .main-header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
@@ -67,11 +66,11 @@
         }
     </style>
     
-    <!-- Preload critical resources -->
+    
     <link rel="preload" href="css/styles.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     
-    <!-- CSS Files - Non-blocking load -->
+    
     <link rel="stylesheet" href="css/combined.min.css" media="print" onload="this.media='all'; this.onload=null;">
     <noscript><link rel="stylesheet" href="css/combined.min.css"></noscript>
     <noscript><link rel="stylesheet" href="css/styles.min.css"></noscript>
@@ -80,9 +79,46 @@
     <noscript>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
     </noscript>
+    
+    <script>
+    if (!('IntersectionObserver' in window)) {
+        const script = document.createElement('script');
+        script.src = 'https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver';
+        document.head.appendChild(script);
+    }
+    </script>
+<script>
+    // Optimized Google Analytics - Load after user interaction or 3 seconds
+    (function() {
+        let gaLoaded = false;
+        
+        function loadGA() {
+            if (gaLoaded) return;
+            gaLoaded = true;
+            
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-8YWQ9MES9F');
+            
+            const script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-8YWQ9MES9F';
+            document.head.appendChild(script);
+        }
+        
+        // Load on user interaction
+        ['mousedown', 'mousemove', 'keypress', 'scroll', 'touchstart', 'click'].forEach(function(event) {
+            window.addEventListener(event, loadGA, {once: true, passive: true});
+        });
+        
+        // Fallback: Load after 3 seconds
+        setTimeout(loadGA, 3000);
+    })();
+    </script>
 </head>
 <body>
-    <!-- Header Navigation -->
+    
     <header class="main-header">
         <div class="header-top">
             <div class="container">
@@ -133,7 +169,7 @@
         </nav>
     </header>
 
-    <!-- Error Hero Section -->
+    
     <section class="error-hero">
         <div class="container">
             <div class="error-number">404</div>
@@ -142,7 +178,7 @@
         </div>
     </section>
 
-    <!-- Error Content -->
+    
     <section class="error-content">
         <div class="container">
             <div class="quick-links">
@@ -208,7 +244,7 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
+    
     <section class="cta-section">
         <div class="container">
             <h2 class="cta-title">Still Need Help? We're Here for You!</h2>
@@ -220,7 +256,7 @@
         </div>
     </section>
 
-    <!-- Contact Info Section -->
+    
     <section class="contact-info">
         <div class="container">
             <div class="phone-number">
@@ -231,7 +267,7 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    
     <footer class="main-footer">
         <div class="container">
             <div class="footer-content">
@@ -239,8 +275,8 @@
                     <img src="images/logos/logo-black.svg" alt="Big Cat Roofing" class="footer-logo">
                     <p>Metro Detroit's trusted roofing contractor since 2001. Licensed, insured, and committed to excellence.</p>
                     <div class="footer-badges">
-                        <img src="images/certifications/gaf-certified.png" alt="GAF Certified" class="cert-badge">
-                        <img src="images/certifications/mulehide-certified.png" alt="MuleHide Certified" class="cert-badge">
+                        <img src="images/certifications/gaf-certified.png" alt="GAF Certified" class="cert-badge" loading="lazy">
+                        <img src="images/certifications/mulehide-certified.png" alt="MuleHide Certified" class="cert-badge" loading="lazy">
                     </div>
                 </div>
                 
@@ -296,8 +332,9 @@
         </div>
     </footer>
 
-    <!-- JavaScript Files - Deferred loading -->
+    
     <script src="js/mobile-menu.js" defer></script>
     <script src="js/smooth-scroll.js" defer></script>
+    <script src="js/performance-optimized-loader.min.js" defer></script>
 </body>
 </html>

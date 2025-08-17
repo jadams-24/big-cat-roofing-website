@@ -2,53 +2,51 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8YWQ9MES9F"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-8YWQ9MES9F');
-    </script>
     
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch" href="//unpkg.com">
     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grosse Pointe MI Roofing Contractors | Luxury Home Specialists | Big Cat Roofing</title>
     <meta name="description" content="Premium roofing contractors serving Grosse Pointe, Michigan luxury homes. Historic estates, custom solutions. GAF certified excellence. Call 248-709-3746">
     <meta name="keywords" content="Grosse Pointe roofing contractors, luxury home roofing Grosse Pointe MI, estate roofing, premium roofing Grosse Pointe">
     
-    <!-- Favicon -->
+    
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
     <link rel="apple-touch-icon" sizes="192x192" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="512x512" href="/web-app-manifest-512x512.png">
     
-    <!-- Canonical URL -->
+    
     <link rel="canonical" href="https://bigcatroofs.com/service-areas/grosse-pointe.html">
     
-    <!-- CSS Files -->
+    
     <link rel="stylesheet" href="../css/combined.min.css" media="print" onload="this.media='all'; this.onload=null;">
     <noscript><link rel="stylesheet" href="../css/combined.min.css"></noscript>
     <link rel="stylesheet" href="../css/styles.min.css">
-    <link rel="stylesheet" href="../css/responsive.min.css">
+    <link rel="stylesheet" href="../css/responsive.min.css" media="print" onload="this.media=\'all\'">
     
-    <!-- Performance Optimization -->
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2" as="font" type="font/woff2" crossorigin>
 
-    <!-- Fallback for browsers without JavaScript -->
+    
     <noscript>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
     </noscript>
     
-    <!-- Form Messages CSS -->
-    <link rel="stylesheet" href="../css/popup-modal.min.css">
     
-    <!-- Local Business Schema -->
+
+    
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -76,9 +74,38 @@
         }
     }
     </script>
+<script>
+    // Optimized Google Analytics - Load after user interaction or 3 seconds
+    (function() {
+        let gaLoaded = false;
+        
+        function loadGA() {
+            if (gaLoaded) return;
+            gaLoaded = true;
+            
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-8YWQ9MES9F');
+            
+            const script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-8YWQ9MES9F';
+            document.head.appendChild(script);
+        }
+        
+        // Load on user interaction
+        ['mousedown', 'mousemove', 'keypress', 'scroll', 'touchstart', 'click'].forEach(function(event) {
+            window.addEventListener(event, loadGA, {once: true, passive: true});
+        });
+        
+        // Fallback: Load after 3 seconds
+        setTimeout(loadGA, 3000);
+    })();
+    </script>
 </head>
 <body>
-    <!-- Header Navigation -->
+    
     <header class="main-header">
         <div class="header-top">
             <div class="container">
@@ -129,7 +156,7 @@
         </nav>
     </header>
 
-    <!-- Page Hero -->
+    
     <section class="page-hero" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../images/hero/grosse-pointe-roofing.jpg');">
         <div class="container">
             <div class="page-hero-content">
@@ -143,14 +170,14 @@
         </div>
     </section>
 
-    <!-- Breadcrumb -->
+    
     <div class="breadcrumb">
         <div class="container">
             <a href="/">Home</a> > <a href="/service-areas">Service Areas</a> > <span>Grosse Pointe, MI</span>
         </div>
     </div>
 
-    <!-- Local Introduction -->
+    
     <section class="local-intro">
         <div class="container">
             <div class="intro-content">
@@ -179,7 +206,7 @@
         </div>
     </section>
 
-    <!-- Local Contact Section -->
+    
     <section class="local-contact" id="contact">
         <div class="container">
             <div class="contact-wrapper">
@@ -202,7 +229,7 @@
                 
                 <div class="contact-form-wrapper">
                     <form action="https://formspree.io/f/xvgqvobo" method="POST" class="contact-form estimate-form" novalidate>
-                        <!-- Hidden fields for better email organization -->
+                        
                         <input type="hidden" name="_subject" value="New Roofing Estimate Request - Grosse Pointe Page">
                         <input type="hidden" name="_next" value="https://bigcatroofs.com/thank-you.html">
                         
@@ -271,7 +298,7 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    
     <footer class="main-footer">
         <div class="container">
             <div class="footer-content">
@@ -338,11 +365,10 @@
         </div>
     </footer>
 
-    <!-- Scripts - Optimized loading -->
+    
     <script src="../js/main.min.js" defer></script>
-    <script src="../js/popup-modal.min.js" defer></script>
 
-    <!-- Thank You Modal -->
+    
     <div id="thankYouModal" class="thank-you-modal" style="display: none;" aria-hidden="true" role="dialog" aria-labelledby="thankYouTitle" aria-describedby="thankYouMessage">
         <div class="modal-overlay" onclick="closeThankYouModal()"></div>
         <div class="modal-content">
@@ -380,5 +406,6 @@
             </div>
         </div>
     </div>
+    <script src="../js/performance-optimized-loader.min.js" defer></script>
 </body>
 </html>

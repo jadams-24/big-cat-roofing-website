@@ -1,0 +1,30 @@
+// Minimal Performance Loader
+document.addEventListener('DOMContentLoaded',function(){
+// Lazy load popup modal
+var loadPopup=function(){
+if(!window.pL){
+var s=document.createElement('script');
+s.src='js/popup-modal.min.js';
+s.async=true;
+document.head.appendChild(s);
+window.pL=1;
+}
+};
+// Attach to buttons
+document.querySelectorAll('[href*="estimate"],.estimate-btn').forEach(function(b){
+b.addEventListener('mouseenter',loadPopup,{once:true});
+});
+// Lazy load maps
+var m=document.getElementById('service-area-map');
+if(m&&'IntersectionObserver' in window){
+new IntersectionObserver(function(e){
+if(e[0].isIntersecting&&!window.mL){
+var s=document.createElement('script');
+s.src='js/service-area-map.min.js';
+s.async=true;
+document.head.appendChild(s);
+window.mL=1;
+}
+}).observe(m);
+}
+});
