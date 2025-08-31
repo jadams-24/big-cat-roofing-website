@@ -104,6 +104,10 @@ Header always set Referrer-Policy "strict-origin-when-cross-origin"
 
 # Pretty URLs (remove .html extension)
 RewriteEngine On
+
+# 301 Redirect for Warren Page Consolidation
+Redirect 301 /service-areas/warren.html /warren-roofing.html
+
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.html [NC,L]

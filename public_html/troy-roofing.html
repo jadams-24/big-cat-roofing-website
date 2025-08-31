@@ -115,6 +115,90 @@
         setTimeout(loadGA, 3000);
     })();
     </script>
+    
+    <style>
+    /* HERO SECTION STYLING - CONSISTENT ACROSS ALL CITY PAGES */
+    .hero-section.city-hero {
+        background-color: #333333 !important;
+        padding: 80px 0 !important;
+        text-align: center !important;
+        margin-bottom: 0 !important;
+    }
+    
+    .hero-content {
+        text-align: center !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
+    }
+    
+    .hero-title {
+        color: #ffffff !important;
+        font-size: 54px !important;
+        font-weight: bold !important;
+        margin-bottom: 20px !important;
+        line-height: 1.2 !important;
+    }
+    
+    .hero-subtitle {
+        color: #D4B068 !important;
+        font-size: 18px !important;
+        margin-bottom: 30px !important;
+        font-weight: 500 !important;
+    }
+    
+    .hero-buttons {
+        margin-bottom: 40px !important;
+    }
+    
+    .cta-button.gold {
+        background-color: #D4B068 !important;
+        color: #333333 !important;
+        padding: 15px 30px !important;
+        margin: 0 10px !important;
+        text-decoration: none !important;
+        border-radius: 8px !important;
+        font-weight: bold !important;
+        display: inline-block !important;
+    }
+    
+    .cta-button.white {
+        background-color: #ffffff !important;
+        color: #333333 !important;
+        padding: 15px 30px !important;
+        margin: 0 10px !important;
+        text-decoration: none !important;
+        border-radius: 8px !important;
+        font-weight: bold !important;
+        display: inline-block !important;
+    }
+    
+    /* Mobile responsive */
+    @media (max-width: 768px) {
+        .hero-section.city-hero {
+            padding: 60px 0 !important;
+        }
+        
+        .hero-title {
+            font-size: 36px !important;
+        }
+        
+        .hero-subtitle {
+            font-size: 16px !important;
+            margin-bottom: 25px !important;
+        }
+        
+        .hero-buttons {
+            margin-bottom: 30px !important;
+        }
+        
+        .cta-button.gold, .cta-button.white {
+            display: block !important;
+            margin: 10px auto !important;
+            width: fit-content !important;
+            max-width: 280px !important;
+        }
+    }
+    </style>
 </head>
 <body>
     
@@ -169,20 +253,16 @@
     </header>
     
     
-    <section class="hero-section city-hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Roofing Services in Troy, Michigan</h1>
-                <p class="hero-subtitle">Professional Service • Same-Day Quotes • Local Troy Expertise</p>
-                <div class="hero-description">
-                    <p>For reliable roof repair and replacement in Troy, MI, Big Cat Roofing has been the trusted choice for homeowners throughout this prestigious Oakland County community. From the upscale neighborhoods near Somerset Collection to the established subdivisions around Big Beaver Road, we understand Troy's distinctive architectural styles and the weather challenges that impact your roof.</p>
+    <section class="hero-section city-hero" style="background-color: #333333; padding: 80px 0; text-align: center;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto;">
+            <div class="hero-content" style="text-align: center;">
+                <h1 class="hero-title" style="color: #ffffff; font-size: 54px; font-weight: bold; margin-bottom: 20px; line-height: 1.2;">Roofing Services in Troy, Michigan</h1>
+                <p class="hero-subtitle" style="color: #D4B068; font-size: 18px; margin-bottom: 30px; font-weight: 500;">Professional Service • Same-Day Quotes • Local Troy Expertise</p>
+                
+                <div class="hero-buttons" style="margin-bottom: 40px;">
+                    <a href="tel:248-709-3746" class="cta-button gold" style="background-color: #D4B068; color: #333333; padding: 15px 30px; margin: 0 10px; text-decoration: none; border-radius: 8px; font-weight: bold; display: inline-block;">Call (248) 709-3746</a>
+                    <a href="contact.html" class="cta-button white" style="background-color: #ffffff; color: #333333; padding: 15px 30px; margin: 0 10px; text-decoration: none; border-radius: 8px; font-weight: bold; display: inline-block;">Get Free Estimate</a>
                 </div>
-                <div class="hero-features">
-                    <div class="feature-item">✓ Licensed & Insured (License No. 262400159)</div>
-                    <div class="feature-item">✓ Fast Response Throughout Troy's 33+ Square Miles</div>
-                    <div class="feature-item">✓ Free Estimates</div>
-                </div>
-                <a href="#contact" class="cta-button primary">Get Free Estimate in Troy</a>
             </div>
         </div>
     </section>

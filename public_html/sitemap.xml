@@ -68,6 +68,13 @@
   </url>
   
   <url>
+    <loc>https://bigcatroofs.com/rochester-hills-roofing.html</loc>
+    <lastmod>2025-08-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
     <loc>https://bigcatroofs.com/detroit-roofing.html</loc>
     <lastmod>2025-08-07</lastmod>
     <changefreq>monthly</changefreq>
@@ -325,10 +332,10 @@
   
   <!-- Service Area Directory Pages (Priority: 0.7, changefreq: monthly) -->
   <url>
-    <loc>https://bigcatroofs.com/service-areas/warren.html</loc>
-    <lastmod>2025-08-07</lastmod>
+    <loc>https://bigcatroofs.com/warren-roofing.html</loc>
+    <lastmod>2025-08-31</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   
   <url>
