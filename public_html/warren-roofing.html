@@ -42,13 +42,12 @@
     <link rel="icon" type="image/png" sizes="512x512" href="/web-app-manifest-512x512.png">
     
     
-    <link rel="stylesheet" href="css/combined.min.css" media="print" onload="this.media='all'; this.onload=null;">
+    <link rel="preload" href="css/combined.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="css/styles.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="css/responsive.min.css" media="print" onload="this.media='all'; this.onload=null;">
+    <link rel="stylesheet" href="css/city-page.min.css" media="print" onload="this.media='all'; this.onload=null;">
     <noscript><link rel="stylesheet" href="css/combined.min.css"></noscript>
-    <link rel="stylesheet" href="css/styles.min.css" media="print" onload="this.media='all'; this.onload=null;">
     <noscript><link rel="stylesheet" href="css/styles.min.css"></noscript>
-    <link rel="stylesheet" href="css/responsive.min.css" media="print" onload="this.media=\'all\'">
-    
-    <link rel="stylesheet" href="css/city-page.min.css" media="print" onload="this.media=\'all\'">
     
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
