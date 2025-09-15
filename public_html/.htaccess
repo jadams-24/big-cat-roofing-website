@@ -1,4 +1,19 @@
 # Big Cat Roofing - Server Configuration
+# Remove www subdomain (optional)
+# RewriteEngine On
+
+# Pretty URLs (remove .html extension)
+RewriteEngine On
+ 
+ RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+ RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+# 301 Redirect for Warren Page Consolidation
+Redirect 301 /service-areas/warren.html /warren-roofing.html
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
 
 # Custom 404 Error Page
 ErrorDocument 404 /404.html
@@ -97,20 +112,6 @@ Header always set Referrer-Policy "strict-origin-when-cross-origin"
 # RewriteCond %{HTTPS} off
 # RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# Remove www subdomain (optional)
-# RewriteEngine On
-# RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
-# RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
-
-# Pretty URLs (remove .html extension)
-RewriteEngine On
-
-# 301 Redirect for Warren Page Consolidation
-Redirect 301 /service-areas/warren.html /warren-roofing.html
-
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([^\.]+)$ $1.html [NC,L]
 
 # Prevent access to sensitive files
 <FilesMatch "\.(htaccess|htpasswd|ini|log|sh|inc|bak)$">
