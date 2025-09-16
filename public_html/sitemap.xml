@@ -218,7 +218,7 @@
   
   <!-- Blog Pages (Priority: 0.7 for index, 0.6 for posts, changefreq: weekly for index, yearly for posts) -->
   <url>
-    <loc>https://bigcatroofs.com/blog/index.html</loc>
+    <loc>https://bigcatroofs.com/blog/</loc>
     <lastmod>2025-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>

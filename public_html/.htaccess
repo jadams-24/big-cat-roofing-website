@@ -9,6 +9,9 @@ RewriteEngine On
  RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
 
 # 301 Redirects for Broken Links Fix
+# Blog canonical URL redirect
+Redirect 301 /blog/index.html /blog/
+
 Redirect 301 /service-areas/warren.html /warren-roofing.html
 Redirect 301 /emergency-repair /storm-repair.html
 Redirect 301 /emergency-repair.html /storm-repair.html
