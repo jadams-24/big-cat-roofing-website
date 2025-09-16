@@ -8,8 +8,30 @@ RewriteEngine On
  RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
  RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
 
-# 301 Redirect for Warren Page Consolidation
+# 301 Redirects for Broken Links Fix
 Redirect 301 /service-areas/warren.html /warren-roofing.html
+Redirect 301 /emergency-repair /storm-repair.html
+Redirect 301 /emergency-repair.html /storm-repair.html
+Redirect 301 /free-estimate /contact.html
+Redirect 301 /free-estimate.html /contact.html
+Redirect 301 /service-areas/eastpointe /eastpointe-roofing.html
+Redirect 301 /service-areas/clinton-township /clinton-township-roofing.html
+Redirect 301 /service-areas/madison-heights /madison-heights-roofing.html
+Redirect 301 /service-areas/troy /troy-roofing.html
+Redirect 301 /service-areas/birmingham /royal-oak-roofing.html
+Redirect 301 /service-areas/clawson /clawson-roofing.html
+Redirect 301 /service-areas/birmingham.html /royal-oak-roofing.html
+Redirect 301 /service-areas/troy.html /troy-roofing.html
+Redirect 301 /service-areas/west-bloomfield.html /royal-oak-roofing.html
+Redirect 301 /privacy-policy.html /privacy.html
+Redirect 301 /services/ /service-areas.html
+
+# Duplicate Service Area Page Redirects (301 Permanent)
+Redirect 301 /service-areas/ferndale.html /ferndale-roofing.html
+Redirect 301 /service-areas/grosse-pointe.html /grosse-pointe-roofing.html
+Redirect 301 /service-areas/roseville.html /roseville-roofing.html
+Redirect 301 /service-areas/royal-oak.html /royal-oak-roofing.html
+Redirect 301 /service-areas/sterling-heights.html /sterling-heights-roofing.html
 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
