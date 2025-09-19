@@ -12,6 +12,11 @@ RewriteEngine On
 # Blog canonical URL redirect
 Redirect 301 /blog/index.html /blog/
 
+# Fix 404 Errors for Blog Posts (redirects to correct /blog/posts/ structure)
+Redirect 301 /blog/emergency-roof-repair.html /blog/posts/emergency-roof-repair.html
+Redirect 301 /blog/gaf-vs-competitors.html /blog/posts/gaf-vs-competitors.html
+Redirect 301 /blog/ice-dam-prevention-warren.html /blog/posts/ice-dam-prevention-michigan-2025.html
+
 Redirect 301 /service-areas/warren.html /warren-roofing.html
 Redirect 301 /emergency-repair /storm-repair.html
 Redirect 301 /emergency-repair.html /storm-repair.html
