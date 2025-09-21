@@ -1,0 +1,65 @@
+{
+  "name": "Big Cat Roofing Detroit",
+  "short_name": "Big Cat Roofing",
+  "description": "Professional roofing services in Metro Detroit - GAF Certified contractors with 20+ years experience",
+  "start_url": "/",
+  "display": "minimal-ui",
+  "background_color": "#ffffff",
+  "theme_color": "#d32f2f",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "/assets/images/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "productivity"],
+  "shortcuts": [
+    {
+      "name": "Contact Us",
+      "short_name": "Contact",
+      "description": "Get a free roofing estimate",
+      "url": "/contact.html",
+      "icons": [
+        {
+          "src": "/assets/images/logo.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Residential Roofing",
+      "short_name": "Residential",
+      "description": "Residential roofing services",
+      "url": "/residential-roofing.html",
+      "icons": [
+        {
+          "src": "/assets/images/logo.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Commercial Roofing",
+      "short_name": "Commercial",
+      "description": "Commercial roofing services",
+      "url": "/commercial-roofing.html",
+      "icons": [
+        {
+          "src": "/assets/images/logo.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ]
+}
