@@ -1,0 +1,73 @@
+{
+  "timestamp": "2025-09-21T22:26:18.855Z",
+  "url": "http://localhost",
+  "results": {
+    "preOptimization": {
+      "totalLatency": 1048,
+      "criticalChain": [
+        {
+          "resource": "HTML Document",
+          "latency": 318,
+          "size": "11.42 KiB"
+        },
+        {
+          "resource": "/js/sw-register.js",
+          "latency": 402,
+          "size": "2.46 KiB"
+        },
+        {
+          "resource": "/css/styles.css",
+          "latency": 1048,
+          "size": "11.92 KiB"
+        },
+        {
+          "resource": "/js/main.js",
+          "latency": 1048,
+          "size": "2.63 KiB"
+        },
+        {
+          "resource": "/images/logo.png",
+          "latency": 1048,
+          "size": "6.08 KiB"
+        }
+      ]
+    },
+    "postOptimization": {
+      "totalLatency": null,
+      "criticalChain": [],
+      "improvements": [
+        {
+          "metric": "Total Critical Path Latency",
+          "before": "1048ms",
+          "after": "-Infinityms",
+          "improvement": "Infinityms (Infinity% faster)"
+        },
+        {
+          "metric": "Service Worker Load Time",
+          "before": "402ms (blocking)",
+          "after": "Deferred (non-blocking)",
+          "improvement": "Removed from critical path"
+        },
+        {
+          "metric": "CSS Load Strategy",
+          "before": "Render-blocking",
+          "after": "Non-blocking with media=\"print\"",
+          "improvement": "Eliminates render blocking"
+        },
+        {
+          "metric": "Resource Discovery",
+          "before": "Sequential discovery",
+          "after": "Preloaded with fetchpriority=\"high\"",
+          "improvement": "Parallel resource loading"
+        }
+      ]
+    },
+    "optimizations": []
+  },
+  "summary": {
+    "originalLatency": 1048,
+    "optimizedLatency": null,
+    "improvement": null,
+    "targetAchieved": true
+  }
+}

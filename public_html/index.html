@@ -48,13 +48,16 @@
     <meta name="twitter:site" content="@BigCatRoofing" />
     
     
+    <!-- DNS Preconnect for Critical Domains - Reduces Critical Path Latency -->
+    <link rel="preconnect" href="https://analytics.ahrefs.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="dns-prefetch" href="https://unpkg.com">
-    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+    <!-- DNS Prefetch for Secondary Domains -->
+    <link rel="dns-prefetch" href="https://unpkg.com">
+    <link rel="dns-prefetch" href="https://analytics.google.com">
     
     
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -91,17 +94,32 @@
         .trust-item { text-align: center; flex-shrink: 0; }
     </style>
     
-    
+
+    <!-- Critical Path Resource Preloading - Target: Reduce 1,048ms Latency -->
+
+    <!-- Priority 1: Above-the-fold critical assets (addresses 1,048ms blocking issues) -->
+    <link rel="preload" href="/images/logo.png" as="image" fetchpriority="high">
+    <link rel="preload" href="/css/styles.css" as="style" fetchpriority="high">
+    <link rel="preload" href="/js/main.js" as="script" fetchpriority="high">
+
+    <!-- Priority 2: Critical fonts (prevent font swap) -->
+    <link rel="preload" href="https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2" as="font" type="font/woff2" crossorigin fetchpriority="high">
+
+    <!-- Priority 3: Other visible assets -->
     <link rel="preload" href="images/logos/logo-black.svg" as="image" type="image/svg+xml">
-    <link rel="preload" href="css/styles.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2" as="font" type="font/woff2" crossorigin>
-    
-    
-    <link rel="preload" as="image" href="assets/images/logos/Certified_Plus.png">
-    <link rel="preload" as="image" href="assets/images/logos/Mulehide Logo.png">
-    
-    
+    <link rel="preload" href="assets/images/logos/Certified_Plus.png" as="image">
+    <link rel="preload" href="assets/images/logos/Mulehide Logo.png" as="image">
+
+    <!-- Optimized CSS Loading Strategy - Load Non-Blocking -->
+    <link rel="stylesheet" href="css/styles.css" media="print" onload="this.media='all'; this.onload=null;">
+    <noscript><link rel="stylesheet" href="css/styles.css"></noscript>
+
+    <link rel="stylesheet" href="css/styles.min.css" media="print" onload="this.media='all'; this.onload=null;">
+    <noscript><link rel="stylesheet" href="css/styles.min.css"></noscript>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'; this.onload=null;">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
+
     <link rel="stylesheet" href="css/combined.min.css" media="print" onload="this.media='all'; this.onload=null;">
     <noscript><link rel="stylesheet" href="css/combined.min.css"></noscript>
     
@@ -993,7 +1011,20 @@
             </div>
         </div>
     </div>
+    <!-- Optimized JavaScript Loading - Defer Non-Critical Scripts -->
     <script src="js/performance-optimized-loader.min.js" defer></script>
-    <script src="js/sw-register.js"></script>
+
+    <!-- Defer service worker registration to reduce critical path (was causing 402ms delay) -->
+    <script>
+        // Defer service worker registration until after critical content loads
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                var script = document.createElement('script');
+                script.src = 'js/sw-register.js';
+                script.async = true;
+                document.head.appendChild(script);
+            }, 100);
+        });
+    </script>
 </body>
 </html>

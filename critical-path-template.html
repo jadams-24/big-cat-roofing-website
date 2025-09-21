@@ -1,0 +1,70 @@
+<!-- Critical Path Optimization Template -->
+<!-- Apply these optimizations to all HTML pages to reduce critical path latency -->
+
+<!-- 1. DNS Preconnect for Critical Domains (Reduces DNS lookup latency) -->
+<link rel="preconnect" href="https://analytics.ahrefs.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+<!-- DNS Prefetch for Secondary Domains -->
+<link rel="dns-prefetch" href="https://unpkg.com">
+<link rel="dns-prefetch" href="https://analytics.google.com">
+
+<!-- 2. Critical Resource Preloading (Addresses 1,048ms blocking issues) -->
+<!-- Priority 1: Above-the-fold critical assets -->
+<link rel="preload" href="/images/logo.png" as="image" fetchpriority="high">
+<link rel="preload" href="/css/styles.css" as="style" fetchpriority="high">
+<link rel="preload" href="/js/main.js" as="script" fetchpriority="high">
+
+<!-- Priority 2: Critical fonts (prevent font swap) -->
+<link rel="preload" href="https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2" as="font" type="font/woff2" crossorigin fetchpriority="high">
+
+<!-- 3. Non-Blocking CSS Loading Strategy -->
+<link rel="stylesheet" href="css/styles.css" media="print" onload="this.media='all'; this.onload=null;">
+<noscript><link rel="stylesheet" href="css/styles.css"></noscript>
+
+<link rel="stylesheet" href="css/styles.min.css" media="print" onload="this.media='all'; this.onload=null;">
+<noscript><link rel="stylesheet" href="css/styles.min.css"></noscript>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'; this.onload=null;">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
+
+<!-- 4. Critical Inline CSS (Add above-the-fold styles here) -->
+<style>
+    /* Critical above-the-fold styles */
+    @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url('https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2') format('woff2');
+    }
+    body { font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; }
+    .main-header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    .btn-primary { background: #C8AF6A; color: #fff; padding: 12px 24px; text-decoration: none; border-radius: 4px; }
+    .page-hero { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)); color: white; padding: 100px 0; text-align: center; }
+    /* Prevent layout shift */
+    .hero { min-height: 600px; display: flex; align-items: center; }
+    .hero-content { width: 100%; }
+    .logo-header { width: 260px; height: 78px; }
+    .trust-bar { padding: 20px 0; }
+    .trust-items { display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap; }
+    .trust-item { text-align: center; flex-shrink: 0; }
+</style>
+
+<!-- 5. Deferred JavaScript Loading (At end of body) -->
+<!-- Defer service worker registration to reduce critical path -->
+<script>
+    // Defer service worker registration until after critical content loads
+    window.addEventListener('load', function() {
+        setTimeout(function() {
+            var script = document.createElement('script');
+            script.src = 'js/sw-register.js';
+            script.async = true;
+            document.head.appendChild(script);
+        }, 100);
+    });
+</script>
